@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferias y Stands | Diseño de Espacios</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">FERIAS Y STANDS<span class="dot">.</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Inicio</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="portfolio.html" class="nav-link">Portafolio</a>
+                <a href="agenda.html" class="nav-link" style="color: var(--highlight);">Agendar</a>
+                <a href="contacto.html" class="nav-link btn-contact">Contacto</a>
+            </div>
+            <div class="hamburger">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-link">Inicio</a>
+        <a href="servicios.html" class="mobile-link">Servicios</a>
+        <a href="nosotros.html" class="mobile-link">Nosotros</a>
+        <a href="portfolio.html" class="mobile-link">Portafolio</a>
+        <a href="contacto.html" class="mobile-link">Contacto</a>
+        <a href="agenda.html" class="mobile-link-highlight">Agendar Cita Zoom</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg">
+            <video autoplay muted loop playsinline poster="fotosyvideos/F1.jpeg">
+                <!-- Using a high-quality placeholder video source -->
+                <source src="fotosyvideos/V3.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"
+                style="position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.3);"></div>
+        </div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Espacios que <br><span class="highlight">Inspiran</span></h1>
+            <p class="hero-subtitle">Diseño, construcción e instalación integral de stands para ferias y eventos.</p>
+            <div class="hero-btns">
+                <a href="portfolio.html" class="btn btn-primary">Ver Proyectos</a>
+                <a href="contacto.html" class="btn btn-outline">Consultar</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>Scroll</span>
+            <i class='bx bx-chevron-down'></i>
+        </div>
+    </header>
+
+    <!-- Services Summary -->
+    <section class="services section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo Que Hacemos</h2>
+                <p class="section-subtitle">Soluciones integrales de diseño y montaje.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bx-palette'></i></div>
+                    <h3>Diseño e Interiorismo</h3>
+                    <p>Creamos atmósferas únicas que reflejan tu marca.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bx-building'></i></div>
+                    <h3>Construcción de Stands</h3>
+                    <p>Carpintería, pintura y acabados de alta calidad.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bx-bulb'></i></div>
+                    <h3>Instalación Técnica</h3>
+                    <p>Electricidad e iluminación profesional.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="servicios.html" class="btn btn-outline"
+                    style="border-color: var(--highlight); color: var(--highlight);">Todos los Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainable Section (NEW) -->
+    <section class="sustainable section-padding">
+        <div class="container sustainable-grid">
+            <div class="sustainable-image">
+                <img src="fotosyvideos/F7.jpeg" alt="Stand Sostenible">
+            </div>
+            <div class="sustainable-text">
+                <h2 class="section-title">Stands Sostenibles</h2>
+                <p>Comprometidos con el futuro. Diseñamos espacios con materiales reciclables, iluminación LED de bajo
+                    consumo y procesos de montaje eco-friendly.</p>
+                <div class="sustainable-features">
+                    <div class="sus-feature"><i class='bx bx-leaf'></i> Materiales Reciclados</div>
+                    <div class="sus-feature"><i class='bx bx-sun'></i> Energía Eficiente</div>
+                    <div class="sus-feature"><i class='bx bx-recycle'></i> Reutilización de Estructuras</div>
+                    <div class="sus-feature"><i class='bx bx-check-circle'></i> Certificación Eco</div>
+                </div>
+                <br>
+                <a href="nosotros.html" class="btn btn-primary"
+                    style="background: transparent; border: 2px solid #4CAF50; color: #4CAF50;">Saber Más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section-padding">
+        <div class="container">
+            <h2 class="section-title center" style="text-align: center;">Clientes Satisfechos</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-track">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-card active">
+                        <div class="testimonial-content">
+                            <div class="testimonial-project-img"
+                                style="background-image: url('fotosyvideos/Delphi2.jpeg');">
+                            </div>
+                            <div class="testimonial-info">
+                                <i class='bx bxs-quote-alt-left quote-icon'></i>
+                                <p class="testimonial-text">"Ferias y Stands transformó nuestra presencia en el Mobile
+                                    World Congress. Su atención al detalle superó nuestras expectativas."</p>
+                                <div class="testimonial-author-block">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Ruiz"
+                                        class="client-avatar">
+                                    <div class="author-details">
+                                        <span class="author-name">Carlos Ruiz</span>
+                                        <span class="author-role">CMO, TechNova</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-project-img"
+                                style="background-image: url('fotosyvideos/Indupanel2.jpeg');">
+                            </div>
+                            <div class="testimonial-info">
+                                <i class='bx bxs-quote-alt-left quote-icon'></i>
+                                <p class="testimonial-text">"La sostenibilidad era clave y supieron plasmarla
+                                    perfectamente con materiales eco-friendly sin sacrificar elegancia."</p>
+                                <div class="testimonial-author-block">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Elena García"
+                                        class="client-avatar">
+                                    <div class="author-details">
+                                        <span class="author-name">Elena García</span>
+                                        <span class="author-role">CEO, EcoSense</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-project-img"
+                                style="background-image: url('fotosyvideos/industrias DUERO2.jpeg');">
+                            </div>
+                            <div class="testimonial-info">
+                                <i class='bx bxs-quote-alt-left quote-icon'></i>
+                                <p class="testimonial-text">"Profesionalidad absoluta. Cumplieron con los plazos
+                                    ajustados y el resultado fue espectacular."</p>
+                                <div class="testimonial-author-block">
+                                    <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Javier Méndez"
+                                        class="client-avatar">
+                                    <div class="author-details">
+                                        <span class="author-name">Javier Méndez</span>
+                                        <span class="author-role">Gerente, Future Corner</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="control-btn prev-btn"><i class='bx bx-chevron-left'></i></button>
+                    <button class="control-btn next-btn"><i class='bx bx-chevron-right'></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Marquee -->
+    <section class="clients section-padding">
+        <div class="container">
+            <h2 class="section-title center" style="text-align: center; margin-bottom: 3rem;">Han confiado en nosotros
+            </h2>
+            <div class="marquee">
+                <!-- Duplicate content for seamless loop -->
+                <div class="marquee-content">
+                    <div class="client-card"><img src="logos/Air_Transat_logo.svg.png" alt="Air Transat"
+                            class="client-logo-img"></div>
+                    <div class="client-card"><img src="logos/Delphi logo.png" alt="Delphi" class="client-logo-img">
+                    </div>
+                    <div class="client-card"><img src="logos/DieselAM-logo.png" alt="Diesel AM" class="client-logo-img">
+                    </div>
+                    <div class="client-card"><img src="logos/aragon defence hub.jpg" alt="Aragon Defence"
+                            class="client-logo-img"></div>
+                    <div class="client-card"><img src="logos/dksh-logo.png" alt="DKSH" class="client-logo-img"></div>
+                    <div class="client-card"><img src="logos/felix-solis-logo.png" alt="Felix Solis"
+                            class="client-logo-img"></div>
+                    <div class="client-card"><img src="logos/indupanel.png" alt="Indupanel" class="client-logo-img">
+                    </div>
+                    <div class="client-card"><img src="logos/occ sport.jpg" alt="OCC Sport" class="client-logo-img">
+                    </div>
+                    <div class="client-card"><img src="logos/pluspower.png" alt="Plus Power" class="client-logo-img">
+                    </div>
+                </div>
+                <!-- Second copy for the loop -->
+                <div class="marquee-content" aria-hidden="true">
+                    <div class="client-card"><img src="logos/Air_Transat_logo.svg.png" alt="Air Transat"
+                            class="client-logo-img"></div>
+                    <div class="client-card"><img src="logos/Delphi logo.png" alt="Delphi" class="client-logo-img">
+                    </div>
+                    <div class="client-card"><img src="logos/DieselAM-logo.png" alt="Diesel AM" class="client-logo-img">
+                    </div>
+                    <div class="client-card"><img src="logos/aragon defence hub.jpg" alt="Aragon Defence"
+                            class="client-logo-img"></div>
+                    <div class="client-card"><img src="logos/dksh-logo.png" alt="DKSH" class="client-logo-img"></div>
+                    <div class="client-card"><img src="logos/felix-solis-logo.png" alt="Felix Solis"
+                            class="client-logo-img"></div>
+                    <div class="client-card"><img src="logos/indupanel.png" alt="Indupanel" class="client-logo-img">
+                    </div>
+                    <div class="client-card"><img src="logos/occ sport.jpg" alt="OCC Sport" class="client-logo-img">
+                    </div>
+                    <div class="client-card"><img src="logos/pluspower.png" alt="Plus Power" class="client-logo-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Summary -->
+    <section class="contact section-padding" style="background: #111;">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title">¿Tienes un proyecto en mente?</h2>
+            <p>Hablemos de cómo hacerlo realidad.</p>
+            <div style="margin-top: 2rem;">
+                <a href="contacto.html" class="btn btn-primary">Contactar Ahora</a>
+                <a href="agenda.html" class="btn btn-zoom" style="margin-left: 15px;">
+                    <i class='bx bx-video'></i> Agenda Zoom
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/34123456789?text=Hola,%20me%20gustaría%20más%20información%20sobre%20vuestros%20stands."
+        class="whatsapp-float" target="_blank">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

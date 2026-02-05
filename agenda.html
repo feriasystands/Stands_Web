@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Reunión | Ferias y Stands</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        /* Specific Agenda Styles */
+        .calendar-wrapper {
+            background: #1a1a1a;
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 2rem;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .month-label {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .calendar-nav-btn {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .calendar-nav-btn:hover {
+            border-color: var(--highlight);
+            color: var(--highlight);
+        }
+
+        .days-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .day-name {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .day-number {
+            padding: 10px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .day-number:hover:not(.disabled) {
+            background: var(--highlight);
+            color: white;
+        }
+
+        .day-number.selected {
+            background: var(--highlight);
+            color: white;
+            box-shadow: 0 0 10px var(--highlight);
+        }
+
+        .day-number.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .slots-column h3 {
+            font-family: var(--font-heading);
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .slots-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .time-slot {
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        .time-slot:hover:not(.occupied) {
+            border-color: var(--highlight);
+            color: var(--highlight);
+        }
+
+        .time-slot.selected {
+            background: var(--highlight);
+            color: white;
+            border-color: var(--highlight);
+        }
+
+        .time-slot.occupied {
+            background: rgba(255, 50, 50, 0.1);
+            color: #ff5555;
+            cursor: not-allowed;
+            text-decoration: line-through;
+        }
+
+        .booking-form {
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            display: none;
+            /* Hidden until slot selected */
+        }
+
+        .booking-form.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @media (max-width: 768px) {
+            .calendar-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">FERIAS Y STANDS<span class="dot">.</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="portfolio.html" class="nav-link">Portafolio</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </div>
+            <div class="hamburger">
+                <i class='bx bx-menu'></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-link">Inicio</a>
+        <a href="servicios.html" class="mobile-link">Servicios</a>
+        <a href="nosotros.html" class="mobile-link">Nosotros</a>
+        <a href="portfolio.html" class="mobile-link">Portafolio</a>
+        <a href="contacto.html" class="mobile-link">Contacto</a>
+    </div>
+
+    <header class="hero" style="height: 50vh;">
+        <div class="hero-bg"
+            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('fotosyvideos/F6.jpeg'); background-size: cover; background-position: center;">
+        </div>
+        <div class="container hero-content">
+            <h1 class="hero-title" style="font-size: 3.5rem;">Agendar Reunión</h1>
+            <p class="hero-subtitle">Reserva tu espacio para una consultoría online gratuita.</p>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="calendar-wrapper">
+                <!-- Left: Calendar -->
+                <div class="calendar-column">
+                    <div class="calendar-header">
+                        <button class="calendar-nav-btn" id="prevMonth"><i class='bx bx-chevron-left'></i></button>
+                        <span class="month-label" id="monthLabel"></span>
+                        <button class="calendar-nav-btn" id="nextMonth"><i class='bx bx-chevron-right'></i></button>
+                    </div>
+                    <div class="days-grid" id="daysGrid">
+                        <!-- JS injected days -->
+                    </div>
+                </div>
+
+                <!-- Right: Slots -->
+                <div class="slots-column">
+                    <h3>Horarios Disponibles</h3>
+                    <p id="selectedDateText" style="color: var(--gray); margin-bottom: 1rem;">Selecciona un día</p>
+                    <div class="slots-grid" id="slotsGrid">
+                        <!-- JS injected slots -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Form -->
+            <div class="booking-form container" style="max-width: 600px;" id="bookingForm">
+                <h3 class="section-title center" style="text-align: center; font-size: 2rem;">Confirmar Cita</h3>
+                <form id="confirmForm">
+                    <div class="form-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" id="userName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="userEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Tema de Interés</label>
+                        <textarea id="userTopic" rows="2" placeholder="Ej: Stand para feria en Madrid..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Confirmar Reserva</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Inline script for Calendar Logic (keeping main.js clean or moving there later)
+        // I will implement the specific logic here first to ensure it works isolated.
+
+        const monthLabel = document.getElementById('monthLabel');
+        const daysGrid = document.getElementById('daysGrid');
+        const slotsGrid = document.getElementById('slotsGrid');
+        const selectedDateText = document.getElementById('selectedDateText');
+        const bookingForm = document.getElementById('bookingForm');
+
+        let currentDate = new Date();
+        const today = new Date();
+
+        const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        const dayNames = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"];
+
+        function renderCalendar() {
+            daysGrid.innerHTML = "";
+
+            // Add Day Names Header
+            dayNames.forEach(name => {
+                const dayNameEl = document.createElement('div');
+                dayNameEl.className = 'day-name';
+                dayNameEl.innerText = name;
+                daysGrid.appendChild(dayNameEl);
+            });
+
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+
+            monthLabel.innerText = `${months[month]} ${year}`;
+
+            // First day of month
+            const firstDay = new Date(year, month, 1).getDay(); // 0 is Sunday
+            // Adjust to Monday start
+            const adjustedFirstDay = firstDay === 0 ? 6 : firstDay - 1;
+
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+            // Empty slots for previous month
+            for (let i = 0; i < adjustedFirstDay; i++) {
+                const empty = document.createElement('div');
+                daysGrid.appendChild(empty);
+            }
+
+            // Days
+            for (let i = 1; i <= daysInMonth; i++) {
+                const dayEl = document.createElement('div');
+                dayEl.className = 'day-number';
+                dayEl.innerText = i;
+
+                // Disable past days
+                const checkDate = new Date(year, month, i);
+                if (checkDate < new Date().setHours(0, 0, 0, 0)) {
+                    dayEl.classList.add('disabled');
+                } else {
+                    dayEl.addEventListener('click', () => selectDate(i, month, year, dayEl));
+                }
+
+                daysGrid.appendChild(dayEl);
+            }
+        }
+
+        function selectDate(day, month, year, el) {
+            document.querySelectorAll('.day-number').forEach(d => d.classList.remove('selected'));
+            el.classList.add('selected');
+            selectedDateText.innerText = `${day} de ${months[month]}`;
+            renderSlots();
+        }
+
+        function renderSlots() {
+            slotsGrid.innerHTML = "";
+            const startHour = 9;
+            const endHour = 17;
+
+            for (let h = startHour; h < endHour; h++) {
+                const slot = document.createElement('div');
+                slot.className = 'time-slot';
+                slot.innerText = `${h}:00 - ${h + 1}:00`;
+
+                // Randomly occupy some slots
+                if (Math.random() > 0.7) {
+                    slot.classList.add('occupied');
+                    slot.title = "No disponible";
+                } else {
+                    slot.addEventListener('click', () => selectSlot(slot));
+                }
+
+                slotsGrid.appendChild(slot);
+            }
+        }
+
+        function selectSlot(el) {
+            document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+            el.classList.add('selected');
+            bookingForm.classList.add('active');
+            // Scroll to form
+            bookingForm.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('prevMonth').addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        });
+
+        document.getElementById('nextMonth').addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        });
+
+        // Form Submit
+        document.getElementById('confirmForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('userName').value;
+            const topic = document.getElementById('userTopic').value;
+            const date = selectedDateText.innerText;
+            const time = document.querySelector('.time-slot.selected').innerText;
+
+            const msg = `Hola, soy ${name}. Me gustaría agendar una reunión el ${date} a las ${time}. Tema: ${topic}`;
+            const link = `https://wa.me/34123456789?text=${encodeURIComponent(msg)}`;
+
+            window.open(link, '_blank');
+        });
+
+        renderCalendar();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Ferias y Stands</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">FERIAS Y STANDS<span class="dot">.</span></a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="nosotros.html" class="nav-link">Nosotros</a>
+                <a href="portfolio.html" class="nav-link active">Portafolio</a>
+                <a href="agenda.html" class="nav-link" style="color: var(--highlight);">Agendar</a>
+                <a href="contacto.html" class="nav-link btn-contact">Contacto</a>
+            </div>
+            <div class="hamburger"><i class='bx bx-menu'></i></div>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-link">Inicio</a>
+        <a href="servicios.html" class="mobile-link">Servicios</a>
+        <a href="nosotros.html" class="mobile-link">Nosotros</a>
+        <a href="portfolio.html" class="mobile-link">Portafolio</a>
+        <a href="contacto.html" class="mobile-link">Contacto</a>
+    </div>
+
+    <header class="hero" style="height: 60vh;">
+        <div class="hero-bg"
+            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center;">
+        </div>
+        <div class="container hero-content">
+            <h1 class="hero-title" style="font-size: 4rem;">Nuestro Trabajo</h1>
+            <p class="hero-subtitle">Explora nuestros proyectos más destacados.</p>
+        </div>
+    </header>
+
+    <section class="portfolio section-padding">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Item 1: Delphi -->
+                <div class="portfolio-item item-1" style="background-image: url('fotosyvideos/Delphi.jpeg');">
+                    <div class="logo-corner">
+                        <img src="logos/Delphi logo.png" alt="Delphi Logo">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Delphi Technologies</h3>
+                        <p>Feria Automoción</p>
+                    </div>
+                </div>
+                <!-- Item 2: Aragon -->
+                <div class="portfolio-item item-2"
+                    style="background-image: url('fotosyvideos/ARAGON DEFENCE HUB.jpeg');">
+                    <div class="logo-corner">
+                        <img src="logos/aragon defence hub.jpg" alt="Aragon Logo">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Aragon Defence Hub</h3>
+                        <p>Seguridad y Defensa</p>
+                    </div>
+                </div>
+                <!-- Item 3: Felix Solis -->
+                <div class="portfolio-item item-3" style="background-image: url('fotosyvideos/FelixSolis.jpeg');">
+                    <div class="logo-corner">
+                        <img src="logos/felix-solis-logo.png" alt="Felix Solis Logo">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Felix Solis</h3>
+                        <p>Vinos y Exposiciones</p>
+                    </div>
+                </div>
+                <!-- Item 4: Indupanel -->
+                <div class="portfolio-item item-4" style="background-image: url('fotosyvideos/Indupanel.jpeg');">
+                    <div class="logo-corner">
+                        <img src="logos/indupanel.png" alt="Indupanel Logo">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Indupanel</h3>
+                        <p>Paneles y Construcción</p>
+                    </div>
+                </div>
+                <!-- Item 5: Plus Power -->
+                <div class="portfolio-item"
+                    style="background-image: url('fotosyvideos/PLUSPOWER.jpeg'); background-size: cover; background-position: center;">
+                    <div class="logo-corner">
+                        <img src="logos/pluspower.png" alt="Plus Power Logo">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Plus Power</h3>
+                        <p>Energía y Tecnología</p>
+                    </div>
+                </div>
+                <!-- Item 6: Industrias Duero (Photo only, or maybe generic asset if logo missing in list) -->
+                <div class="portfolio-item"
+                    style="background-image: url('fotosyvideos/industrias DUERO.jpeg'); background-size: cover; background-position: center;">
+                    <!-- No specific logo found in list for Duero named clearly 'Duero', using just text or maybe 'Asset-69' if user meant that. Leaving logo corner out for now to avoid error -->
+                    <div class="portfolio-overlay">
+                        <h3>Industrias Duero</h3>
+                        <p>Seguridad Vial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/34123456789" class="whatsapp-float" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
