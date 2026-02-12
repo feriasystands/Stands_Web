@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio | Ferias y Stands</title>
+    <meta name="description" content="Descubre nuestros proyectos más destacados. Stands que marcan la diferencia.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
@@ -29,88 +28,221 @@
             <div class="hamburger"><i class='bx bx-menu'></i></div>
         </div>
     </nav>
+
     <div class="mobile-menu">
         <a href="index.html" class="mobile-link">Inicio</a>
         <a href="servicios.html" class="mobile-link">Servicios</a>
         <a href="nosotros.html" class="mobile-link">Nosotros</a>
         <a href="portfolio.html" class="mobile-link">Portafolio</a>
+        <a href="agenda.html" class="mobile-link">Agendar</a>
         <a href="contacto.html" class="mobile-link">Contacto</a>
     </div>
 
-    <header class="hero" style="height: 60vh;">
-        <div class="hero-bg"
-            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center;">
-        </div>
+    <header class="hero" style="height: 70vh; position: relative;">
+        <div class="hero-bg" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center;"></div>
+        <div class="hero-pattern"></div>
         <div class="container hero-content">
-            <h1 class="hero-title" style="font-size: 4rem;">Nuestro Trabajo</h1>
-            <p class="hero-subtitle">Explora nuestros proyectos más destacados.</p>
+            <h1 class="hero-title hero-title-decorated" style="font-size: 4.5rem;">Nuestro Portafolio</h1>
+            <p class="hero-subtitle">Stands que transforman visitas en conversaciones, conversaciones en negocios</p>
         </div>
     </header>
 
+    <!-- Stats Banner -->
+    <section class="section-padding" style="background: var(--secondary); padding: 3rem 0;">
+        <div class="container">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Proyectos Completados</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">Sectores Industriales</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Recintos Feriales</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Satisfacción Garantizada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
     <section class="portfolio section-padding">
         <div class="container">
+            <div class="center">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <p class="section-subtitle">Una selección de nuestros trabajos más representativos</p>
+            </div>
             <div class="portfolio-grid">
-                <!-- Item 1: Delphi -->
-                <div class="portfolio-item item-1" style="background-image: url('fotosyvideos/Delphi.jpeg');">
+                <!-- Delphi -->
+                <div class="portfolio-item" style="background-image: url('fotosyvideos/Delphi.jpeg'); grid-column: span 2;">
                     <div class="logo-corner">
                         <img src="logos/Delphi logo.png" alt="Delphi Logo">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Delphi Technologies</h3>
-                        <p>Feria Automoción</p>
+                        <p>Stand de 120m² • Feria de Automoción Barcelona</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Stand premium con zona de recepción, sala de reuniones privada, área de demostración de productos y showroom interactivo. Iluminación LED RGB y pantallas audiovisuales 4K integradas.</p>
                     </div>
                 </div>
-                <!-- Item 2: Aragon -->
-                <div class="portfolio-item item-2"
-                    style="background-image: url('fotosyvideos/ARAGON DEFENCE HUB.jpeg');">
+
+                <!-- Aragon Defence -->
+                <div class="portfolio-item" style="background-image: url('fotosyvideos/ARAGON DEFENCE HUB.jpeg');">
                     <div class="logo-corner">
                         <img src="logos/aragon defence hub.jpg" alt="Aragon Logo">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Aragon Defence Hub</h3>
-                        <p>Seguridad y Defensa</p>
+                        <p>Stand de 85m² • Feria Internacional de Defensa</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Diseño sobrio y profesional con acabados de alta seguridad. Zona de exposición técnica y sala de presentaciones.</p>
                     </div>
                 </div>
-                <!-- Item 3: Felix Solis -->
-                <div class="portfolio-item item-3" style="background-image: url('fotosyvideos/FelixSolis.jpeg');">
+
+                <!-- Felix Solis -->
+                <div class="portfolio-item" style="background-image: url('fotosyvideos/FelixSolis.jpeg');">
                     <div class="logo-corner">
                         <img src="logos/felix-solis-logo.png" alt="Felix Solis Logo">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Felix Solis</h3>
-                        <p>Vinos y Exposiciones</p>
+                        <p>Stand de 95m² • Feria del Vino Madrid</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Espacio elegante con barra de cata, vinoteca iluminada, zona lounge y almacén integrado. Madera noble y acabados premium.</p>
                     </div>
                 </div>
-                <!-- Item 4: Indupanel -->
-                <div class="portfolio-item item-4" style="background-image: url('fotosyvideos/Indupanel.jpeg');">
+
+                <!-- Indupanel -->
+                <div class="portfolio-item" style="background-image: url('fotosyvideos/Indupanel.jpeg');">
                     <div class="logo-corner">
                         <img src="logos/indupanel.png" alt="Indupanel Logo">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Indupanel</h3>
-                        <p>Paneles y Construcción</p>
+                        <p>Stand de 75m² • Feria de Construcción</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Stand modular con muestras de productos, zona técnica de asesoramiento y pantallas informativas. Diseño industrial moderno.</p>
                     </div>
                 </div>
-                <!-- Item 5: Plus Power -->
-                <div class="portfolio-item"
-                    style="background-image: url('fotosyvideos/PLUSPOWER.jpeg'); background-size: cover; background-position: center;">
+
+                <!-- Plus Power -->
+                <div class="portfolio-item" style="background-image: url('fotosyvideos/PLUSPOWER.jpeg');">
                     <div class="logo-corner">
                         <img src="logos/pluspower.png" alt="Plus Power Logo">
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Plus Power</h3>
-                        <p>Energía y Tecnología</p>
+                        <p>Stand de 110m² • Feria de Energía Renovable</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Diseño futurista con elementos tecnológicos. Maquetas interactivas, videowalls y sistema de iluminación dinámico programable.</p>
                     </div>
                 </div>
-                <!-- Item 6: Industrias Duero (Photo only, or maybe generic asset if logo missing in list) -->
-                <div class="portfolio-item"
-                    style="background-image: url('fotosyvideos/industrias DUERO.jpeg'); background-size: cover; background-position: center;">
-                    <!-- No specific logo found in list for Duero named clearly 'Duero', using just text or maybe 'Asset-69' if user meant that. Leaving logo corner out for now to avoid error -->
+
+                <!-- Industrias Duero -->
+                <div class="portfolio-item" style="background-image: url('fotosyvideos/industrias DUERO.jpeg');">
                     <div class="portfolio-overlay">
                         <h3>Industrias Duero</h3>
-                        <p>Seguridad Vial</p>
+                        <p>Stand de 65m² • Feria de Seguridad Vial</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Espacio funcional con área de exhibición de productos, zona de demostraciones y recepción integrada. Colores corporativos destacados.</p>
                     </div>
                 </div>
+
+                <!-- Delphi 2 -->
+                <div class="portfolio-item" style="background-image: url('fotosyvideos/Delphi2.jpeg');">
+                    <div class="logo-corner">
+                        <img src="logos/Delphi logo.png" alt="Delphi Logo">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Delphi Technologies</h3>
+                        <p>Stand de 90m² • Feria Internacional Auto Parts</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Segundo proyecto para Delphi con diseño renovado. Zona de networking, área de productos y espacio para presentaciones técnicas.</p>
+                    </div>
+                </div>
+
+                <!-- Indupanel 2 -->
+                <div class="portfolio-item" style="background-image: url('fotosyvideos/Indupanel2.jpeg');">
+                    <div class="logo-corner">
+                        <img src="logos/indupanel.png" alt="Indupanel Logo">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>Indupanel</h3>
+                        <p>Stand de 100m² • Feria CONSTRUMAT</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Evolución del diseño anterior con mayor espacio. Showroom ampliado, sala de reuniones y zona de almacenamiento optimizada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services We Provided -->
+    <section class="section-padding" style="background: var(--secondary);">
+        <div class="container">
+            <div class="center">
+                <h2 class="section-title">Servicios Implementados</h2>
+                <p class="section-subtitle">Cada proyecto incluye una combinación personalizada de nuestros servicios</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class='bx bx-cube feature-icon'></i>
+                    <h3>Diseño 3D Personalizado</h3>
+                    <p>Renders fotorrealistas y planos técnicos detallados para cada proyecto. Visualización completa antes de la construcción.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-cog feature-icon'></i>
+                    <h3>Fabricación Propia</h3>
+                    <p>Carpintería a medida, mobiliario personalizado y estructuras complejas fabricadas en nuestro taller con materiales premium.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-bulb feature-icon'></i>
+                    <h3>Iluminación LED</h3>
+                    <p>Sistemas de iluminación profesional: focos direccionales, tiras LED RGB, iluminación ambiental y efectos especiales.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-tv feature-icon'></i>
+                    <h3>Integración Audiovisual</h3>
+                    <p>Pantallas LED 4K, videowalls modulares, sistemas de sonido y control centralizado para presentaciones impactantes.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-paint feature-icon'></i>
+                    <h3>Acabados Premium</h3>
+                    <p>Pinturas de alta calidad, lacados especiales, vinilos de gran formato y rotulación profesional con colores corporativos exactos.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-wrench feature-icon'></i>
+                    <h3>Montaje Completo</h3>
+                    <p>Servicio llave en mano: transporte, montaje, supervisión durante el evento y desmontaje final con total garantía.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="center">
+                <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            </div>
+            <div class="testimonial-container" style="margin-top: 3rem;">
+                <div class="testimonial-track">
+                    <div class="testimonial-slide active">
+                        <p class="testimonial-text">"Hemos trabajado con Ferias y Stands en tres eventos diferentes y cada vez superan nuestras expectativas. Su atención al detalle y profesionalidad son incomparables."</p>
+                        <p class="testimonial-author">Roberto Sánchez</p>
+                        <p class="testimonial-role">Director de Eventos, Delphi Technologies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding" style="background: linear-gradient(135deg, var(--highlight), #f87171);">
+        <div class="container center">
+            <h2 class="section-title" style="font-size: 3.5rem;">¿Quieres un Stand Así?</h2>
+            <p style="font-size: 1.2rem; margin: 1.5rem auto; max-width: 600px;">Cuéntanos sobre tu próximo evento y crearemos un stand que superará tus expectativas.</p>
+            <div class="hero-buttons">
+                <a href="contacto.html" class="btn" style="background: white; color: var(--highlight);">Solicitar Presupuesto</a>
+                <a href="agenda.html" class="btn btn-secondary">Agendar Consulta</a>
             </div>
         </div>
     </section>

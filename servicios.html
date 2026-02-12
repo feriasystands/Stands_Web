@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios | Ferias y Stands</title>
+    <meta name="description" content="Servicios integrales para ferias: diseño 3D, carpintería, electricidad, montaje y más.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
@@ -29,75 +28,190 @@
             <div class="hamburger"><i class='bx bx-menu'></i></div>
         </div>
     </nav>
+
     <div class="mobile-menu">
         <a href="index.html" class="mobile-link">Inicio</a>
         <a href="servicios.html" class="mobile-link">Servicios</a>
         <a href="nosotros.html" class="mobile-link">Nosotros</a>
         <a href="portfolio.html" class="mobile-link">Portafolio</a>
+        <a href="agenda.html" class="mobile-link">Agendar</a>
         <a href="contacto.html" class="mobile-link">Contacto</a>
     </div>
 
-    <!-- Header -->
-    <header class="hero" style="height: 60vh;">
-        <div class="hero-bg"
-            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('fotosyvideos/F8.jpeg'); background-size: cover; background-position: center;">
-        </div>
+    <header class="hero" style="height: 70vh; position: relative;">
+        <div class="hero-bg" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('fotosyvideos/F8.jpeg'); background-size: cover; background-position: center;"></div>
+        <div class="hero-pattern"></div>
         <div class="container hero-content">
-            <h1 class="hero-title" style="font-size: 4rem;">Nuestros Servicios</h1>
-            <p class="hero-subtitle">Excelencia en cada detalle de tu stand.</p>
+            <h1 class="hero-title hero-title-decorated" style="font-size: 4.5rem;">Servicios Integrales</h1>
+            <p class="hero-subtitle">Todo lo que necesitas para brillar en ferias y eventos</p>
         </div>
     </header>
 
+    <!-- Main Services -->
     <section class="services section-padding">
         <div class="container">
+            <div class="center">
+                <h2 class="section-title">Nuestros Servicios Principales</h2>
+                <p class="section-subtitle">Soluciones completas para cada aspecto de tu stand</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-palette'></i></div>
                     <h3>Diseño 3D e Interiorismo</h3>
-                    <p>Conceptualización de espacios desde cero. Entregamos renders fotorrealistas para que visualices
-                        tu stand antes de construirlo.</p>
+                    <p>Conceptualización completa de tu espacio. Creamos renders fotorrealistas en 3D para que visualices cada detalle antes de la construcción. Diseño personalizado que refleja la identidad de tu marca y maximiza el impacto visual.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Renders fotorrealistas</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Planos técnicos detallados</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Múltiples propuestas</li>
+                    </ul>
                 </div>
-                <div class="service-card">
-                    <div class="icon-box"><i class='bx bx-paint'></i></div>
-                    <h3>Pintura y Acabados</h3>
-                    <p>Utilizamos pinturas de alta calidad y técnicas modernas para dar a tu stand un acabado impecable
-                        y profesional.</p>
-                </div>
+
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-cog'></i></div>
                     <h3>Carpintería a Medida</h3>
-                    <p>Fabricación propia de mobiliario, mostradores, expositores y estructuras complejas en madera y
-                        derivados.</p>
+                    <p>Fabricación propia en nuestro taller equipado con maquinaria de última generación. Trabajamos madera, MDF, melamina y materiales compuestos. Mobiliario personalizado, mostradores, expositores y estructuras complejas.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Mobiliario personalizado</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Mostradores y recepción</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Expositores especiales</li>
+                    </ul>
                 </div>
+
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bx-paint'></i></div>
+                    <h3>Pintura y Acabados</h3>
+                    <p>Pinturas de alta calidad y técnicas profesionales. Acabados mate, satinado, brillante o especiales como metalizados y texturizados. Cada superficie tratada con el máximo cuidado para un resultado impecable y duradero.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Acabados premium</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Colores corporativos</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Protección UV</li>
+                    </ul>
+                </div>
+
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-bulb'></i></div>
                     <h3>Instalación Eléctrica</h3>
-                    <p>Iluminación LED, focos direccionales, tomas de corriente y boletines eléctricos certificados para
-                        ferias.</p>
+                    <p>Electricistas certificados con experiencia en recintos feriales. Iluminación LED de bajo consumo, focos direccionales, tiras LED RGB, tomas de corriente estratégicas. Incluimos boletines eléctricos y certificaciones requeridas.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Iluminación LED</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Boletines certificados</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Instalación segura</li>
+                    </ul>
                 </div>
+
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-building'></i></div>
-                    <h3>Montaje Integral</h3>
-                    <p>Servicio llave en mano. Nos encargamos del transporte, montaje, mantenimiento durante la feria y
-                        desmontaje.</p>
+                    <h3>Montaje y Desmontaje</h3>
+                    <p>Servicio llave en mano completo. Nos encargamos del transporte, montaje, supervisión durante el evento y desmontaje final. Equipos experimentados que trabajan con eficiencia y respeto a los plazos establecidos.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Transporte incluido</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Montaje profesional</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Supervisión continua</li>
+                    </ul>
                 </div>
+
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-tv'></i></div>
                     <h3>Audiovisuales</h3>
-                    <p>Alquiler e integración de pantallas LED, videowalls y sistemas de sonido para potenciar tu
-                        presencia.</p>
+                    <p>Alquiler e integración de tecnología audiovisual de última generación. Pantallas LED 4K, videowalls modulares, sistemas de sonido profesionales, proyectores y control centralizado. Soporte técnico durante todo el evento.</p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Pantallas LED 4K</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Sistemas de audio</li>
+                        <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i> Soporte técnico</li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="contact-action center" style="text-align: center; margin-top: 4rem;">
-                <h3>¿Necesitas un presupuesto a medida?</h3>
-                <br>
-                <a href="contacto.html" class="btn btn-primary">Solicitar Presupuesto</a>
             </div>
         </div>
     </section>
 
-    <!-- WhatsApp Widget -->
+    <!-- Additional Services -->
+    <section class="section-padding" style="background: var(--secondary);">
+        <div class="container">
+            <div class="center">
+                <h2 class="section-title">Servicios Adicionales</h2>
+                <p class="section-subtitle">Complementa tu stand con estos servicios especializados</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class='bx bx-printer feature-icon'></i>
+                    <h3>Rotulación e Impresión</h3>
+                    <p>Vinilos de gran formato, impresión digital, rotulación de vehículos, señalética interna y externa. Materiales de alta calidad con acabados mate o brillante según tus necesidades.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-spa feature-icon'></i>
+                    <h3>Decoración Floral</h3>
+                    <p>Arreglos florales naturales y artificiales que añaden elegancia y frescura a tu espacio. Diseños personalizados que complementan la estética de tu stand.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-store feature-icon'></i>
+                    <h3>Mobiliario de Alquiler</h3>
+                    <p>Amplio catálogo de mobiliario en alquiler: sillas, mesas, sofás, taburetes, barras y más. Opciones modernas y clásicas para adaptarse a cualquier estilo.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-wifi feature-icon'></i>
+                    <h3>Conectividad WiFi</h3>
+                    <p>Instalación de puntos de acceso WiFi de alta velocidad para que tus visitantes y equipo mantengan conectividad constante durante todo el evento.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-camera feature-icon'></i>
+                    <h3>Fotografía y Video</h3>
+                    <p>Cobertura fotográfica y audiovisual profesional de tu stand. Time-lapse del montaje, fotografías de producto, videos promocionales y contenido para redes sociales.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-package feature-icon'></i>
+                    <h3>Almacenaje</h3>
+                    <p>Guardamos tu stand entre eventos en nuestro almacén seguro y climatizado. Disponible para reutilización en futuras ferias, optimizando tu inversión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="center">
+                <h2 class="section-title">Cómo Trabajamos</h2>
+                <p class="section-subtitle">Un proceso probado para resultados excepcionales</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Briefing Inicial</h3>
+                    <p>Reunión personal o virtual para conocer tus objetivos, analizar el espacio disponible y definir el presupuesto. Entendemos tu marca y tu visión.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Propuesta de Diseño</h3>
+                    <p>En 3-5 días hábiles entregamos renders 3D y planos técnicos. Presentamos hasta 3 propuestas diferentes para que elijas la que mejor se adapte.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Producción</h3>
+                    <p>Una vez aprobado el diseño, iniciamos la fabricación en nuestro taller. Actualizaciones regulares sobre el progreso y control de calidad exhaustivo.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Montaje Final</h3>
+                    <p>Nuestro equipo viaja al recinto ferial 1-2 días antes del evento. Montaje completo, pruebas de funcionamiento y entrega lista para inaugurar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-padding" style="background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(220, 38, 38, 0.05));">
+        <div class="container">
+            <div class="contact-action center" style="text-align: center;">
+                <h2 class="section-title">¿Necesitas un Presupuesto Personalizado?</h2>
+                <p class="section-subtitle" style="max-width: 600px; margin: 0 auto 2rem;">Cuéntanos sobre tu proyecto y te enviaremos un presupuesto detallado sin compromiso en menos de 24 horas.</p>
+                <div class="hero-buttons">
+                    <a href="contacto.html" class="btn btn-primary">Solicitar Presupuesto</a>
+                    <a href="agenda.html" class="btn btn-secondary">Agendar Consulta</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <a href="https://wa.me/34123456789" class="whatsapp-float" target="_blank"><i class='bx bxl-whatsapp'></i></a>
 
     <footer class="footer">

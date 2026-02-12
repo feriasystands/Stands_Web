@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Ferias y Stands</title>
+    <meta name="description" content="Ponte en contacto con nosotros. Estamos listos para hacer realidad tu próximo proyecto.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
@@ -24,84 +23,213 @@
                 <a href="nosotros.html" class="nav-link">Nosotros</a>
                 <a href="portfolio.html" class="nav-link">Portafolio</a>
                 <a href="agenda.html" class="nav-link" style="color: var(--highlight);">Agendar</a>
-                <a href="contacto.html" class="nav-link btn-contact">Contacto</a>
+                <a href="contacto.html" class="nav-link btn-contact active">Contacto</a>
             </div>
             <div class="hamburger"><i class='bx bx-menu'></i></div>
         </div>
     </nav>
+
     <div class="mobile-menu">
         <a href="index.html" class="mobile-link">Inicio</a>
         <a href="servicios.html" class="mobile-link">Servicios</a>
         <a href="nosotros.html" class="mobile-link">Nosotros</a>
         <a href="portfolio.html" class="mobile-link">Portafolio</a>
+        <a href="agenda.html" class="mobile-link">Agendar</a>
         <a href="contacto.html" class="mobile-link">Contacto</a>
     </div>
 
-    <header class="hero" style="height: 60vh;">
-        <div class="hero-bg"
-            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('fotosyvideos/F1.jpeg'); background-size: cover; background-position: center;">
-        </div>
+    <header class="hero" style="height: 70vh; position: relative;">
+        <div class="hero-bg" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('fotosyvideos/F1.jpeg'); background-size: cover; background-position: center;"></div>
+        <div class="hero-pattern"></div>
         <div class="container hero-content">
-            <h1 class="hero-title" style="font-size: 4rem;">Contáctanos</h1>
-            <p class="hero-subtitle">Estamos listos para escuchar tu proyecto.</p>
+            <h1 class="hero-title hero-title-decorated" style="font-size: 4.5rem;">Hablemos</h1>
+            <p class="hero-subtitle">Tu próximo proyecto comienza con una conversación</p>
         </div>
     </header>
 
+    <!-- Contact Options -->
+    <section class="section-padding" style="background: var(--secondary); padding: 4rem 0;">
+        <div class="container">
+            <div class="center">
+                <h2 class="section-title">Múltiples Formas de Contactarnos</h2>
+                <p class="section-subtitle">Elige la opción que mejor se adapte a ti</p>
+            </div>
+            <div class="services-grid" style="margin-top: 3rem;">
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bx-phone-call'></i></div>
+                    <h3>Llámanos</h3>
+                    <p style="margin-bottom: 1rem;">Atención personalizada de lunes a viernes de 9:00 a 18:00h</p>
+                    <a href="tel:+34123456789" style="color: var(--highlight); font-weight: 600;">+34 123 456 789</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bx-envelope'></i></div>
+                    <h3>Envíanos un Email</h3>
+                    <p style="margin-bottom: 1rem;">Respuesta en menos de 24 horas laborables</p>
+                    <a href="/cdn-cgi/l/email-protection#c8a0a7a4a988aeadbaa1a9bbb1bbbca9a6acbbe6aba7a5" style="color: var(--highlight); font-weight: 600;"><span class="__cf_email__" data-cfemail="89e1e6e5e8c9efecfbe0e8faf0fafde8e7edfaa7eae6e4">[email&#160;protected]</span></a>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bxl-whatsapp'></i></div>
+                    <h3>WhatsApp</h3>
+                    <p style="margin-bottom: 1rem;">Respuesta rápida y directa por chat</p>
+                    <a href="https://wa.me/34123456789" target="_blank" style="color: var(--highlight); font-weight: 600;">Abrir Chat</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bx-calendar'></i></div>
+                    <h3>Agendar Reunión</h3>
+                    <p style="margin-bottom: 1rem;">Consultoría online gratuita de 30 minutos</p>
+                    <a href="agenda.html" style="color: var(--highlight); font-weight: 600;">Reservar Cita</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Section -->
     <section class="contact section-padding">
         <div class="container contact-wrapper">
             <div class="contact-info">
                 <h2>Información de Contacto</h2>
-                <p>Puedes visitarnos en nuestras oficinas, llamarnos o escribirnos.</p>
+                <p>Visítanos en nuestras oficinas, llámanos o envíanos un mensaje. Estamos aquí para ayudarte a crear el stand perfecto para tu próximo evento.</p>
 
-                <div class="contact-methods">
+                <div class="contact-methods" style="margin-top: 2rem;">
                     <div class="method">
                         <i class='bx bx-phone'></i>
-                        <span>+34 123 456 789</span>
+                        <div>
+                            <strong style="display: block; margin-bottom: 0.3rem;">Teléfono</strong>
+                            <span>+34 123 456 789</span>
+                        </div>
                     </div>
                     <div class="method">
                         <i class='bx bx-envelope'></i>
-                        <span>hola@feriasystands.com</span>
+                        <div>
+                            <strong style="display: block; margin-bottom: 0.3rem;">Email</strong>
+                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fa9295969bba9c9f88939b8983898e9b949e89d4999597">[email&#160;protected]</a></span>
+                        </div>
                     </div>
                     <div class="method">
                         <i class='bx bx-map'></i>
-                        <span>Calle Diseño 123, Madrid, España</span>
+                        <div>
+                            <strong style="display: block; margin-bottom: 0.3rem;">Oficina</strong>
+                            <span>Calle Diseño 123<br>28001 Madrid, España</span>
+                        </div>
+                    </div>
+                    <div class="method">
+                        <i class='bx bx-time-five'></i>
+                        <div>
+                            <strong style="display: block; margin-bottom: 0.3rem;">Horario</strong>
+                            <span>Lun - Vie: 9:00 - 18:00h<br>Sáb: 10:00 - 14:00h</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="social-links">
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-linkedin'></i></a>
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                <div style="margin: 2.5rem 0;">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">Síguenos en Redes Sociales</h3>
+                    <div class="social-links">
+                        <a href="#" title="Instagram"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#" title="Facebook"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" title="YouTube"><i class='bx bxl-youtube'></i></a>
+                    </div>
                 </div>
 
-                <a href="https://zoom.us/" target="_blank" class="btn btn-zoom">
-                    <i class='bx bx-video'></i> Agendar Cita en Zoom
+                <a href="https://zoom.us/" target="_blank" class="btn btn-zoom" style="width: 100%;">
+                    <i class='bx bx-video'></i> Agendar Videollamada en Zoom
                 </a>
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form" id="contactForm">
+                <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1.5rem;">Envíanos un Mensaje</h3>
+                <p style="color: var(--gray); margin-bottom: 2rem;">Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.</p>
+                
                 <div class="form-group">
-                    <label>Nombre</label>
+                    <label>Nombre Completo *</label>
                     <input type="text" placeholder="Tu nombre" required>
                 </div>
+                
                 <div class="form-group">
-                    <label>Email</label>
+                    <label>Email *</label>
                     <input type="email" placeholder="tucorreo@empresa.com" required>
                 </div>
+                
                 <div class="form-group">
-                    <label>Mensaje</label>
-                    <textarea rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                    <label>Teléfono</label>
+                    <input type="tel" placeholder="+34 600 000 000">
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                
+                <div class="form-group">
+                    <label>Empresa</label>
+                    <input type="text" placeholder="Nombre de tu empresa">
+                </div>
+                
+                <div class="form-group">
+                    <label>Tipo de Proyecto *</label>
+                    <select style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; color: var(--white); font-family: var(--font-body);" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="stand">Stand para feria</option>
+                        <option value="evento">Evento corporativo</option>
+                        <option value="showroom">Showroom permanente</option>
+                        <option value="pop-up">Pop-up store</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Cuéntanos sobre tu Proyecto *</label>
+                    <textarea rows="5" placeholder="Describe tu proyecto: dimensiones aproximadas, feria/evento, fechas, presupuesto estimado, servicios que necesitas..." required></textarea>
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label style="display: flex; align-items: center; cursor: pointer;">
+                        <input type="checkbox" required style="width: auto; margin-right: 0.5rem;">
+                        <span style="color: var(--gray); font-size: 0.9rem;">Acepto la <a href="#" style="color: var(--highlight);">política de privacidad</a></span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Enviar Mensaje</button>
             </form>
         </div>
     </section>
 
-    <!-- Map Placeholder (Image for now) -->
-    <div
-        style="width: 100%; height: 400px; background: #333; display: flex; align-items: center; justify-content: center; overflow: hidden;">
-        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80"
-            alt="Mapa" style="width: 100%; opacity: 0.5;">
+    <!-- FAQ Section -->
+    <section class="section-padding" style="background: var(--secondary);">
+        <div class="container">
+            <div class="center">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">Respuestas rápidas a las dudas más comunes</p>
+            </div>
+            <div class="feature-grid" style="margin-top: 3rem;">
+                <div class="feature-card">
+                    <i class='bx bx-time-five feature-icon'></i>
+                    <h3>¿Cuánto tiempo necesitan?</h3>
+                    <p>Dependiendo de la complejidad, entre 2-4 semanas desde la aprobación del diseño hasta el montaje final. Para proyectos urgentes, contacta directamente.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-euro feature-icon'></i>
+                    <h3>¿Cómo es el proceso de presupuesto?</h3>
+                    <p>Envíanos los detalles de tu proyecto y en 24-48 horas recibirás un presupuesto detallado sin compromiso. Todo transparente y claro.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-map feature-icon'></i>
+                    <h3>¿Trabajan fuera de Madrid?</h3>
+                    <p>Sí, trabajamos en toda España y Europa. Incluimos transporte y desplazamiento del equipo de montaje en el presupuesto.</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-recycle feature-icon'></i>
+                    <h3>¿Puedo reutilizar mi stand?</h3>
+                    <p>Absolutamente. Diseñamos stands modulares que puedes reutilizar en múltiples eventos. También ofrecemos servicio de almacenamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <div style="width: 100%; height: 450px; background: #333; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80" alt="Ubicación en mapa" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; background: rgba(0,0,0,0.8); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
+            <i class='bx bx-map' style="font-size: 3rem; color: var(--highlight); margin-bottom: 1rem;"></i>
+            <h3 style="margin-bottom: 0.5rem;">Visítanos</h3>
+            <p style="color: var(--gray);">Calle Diseño 123, Madrid</p>
+            <a href="https://maps.google.com" target="_blank" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">Ver en Google Maps</a>
+        </div>
     </div>
 
     <a href="https://wa.me/34123456789" class="whatsapp-float" target="_blank"><i class='bx bxl-whatsapp'></i></a>
@@ -111,7 +239,4 @@
             <p>&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+    <script data-cfasync="false" src="/cdn-cgi/s
