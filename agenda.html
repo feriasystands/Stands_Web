@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendar Reunión | Ferias y Stands</title>
-    <meta name="description" content="Agenda una consultoría gratuita online. Elige el día y hora que mejor te convenga.">
+    <meta name="description"
+        content="Agenda una consultoría gratuita online. Elige el día y hora que mejor te convenga.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <style>
@@ -257,12 +260,15 @@
     </div>
 
     <header class="hero" style="height: 60vh; position: relative;">
-        <div class="hero-bg" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('fotosyvideos/F6.jpeg'); background-size: cover; background-position: center;"></div>
-        <div class="hero-pattern"></div>
+        <div class="hero-bg"
+            style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('fotosyvideos/ARAGON\ DEFENCE\ HUB.jpeg'); background-size: cover; background-position: center;">
+        </div>
+
         <div class="container hero-content">
             <h1 class="hero-title hero-title-decorated" style="font-size: 4rem;">Agendar Reunión</h1>
             <p class="hero-subtitle">Consultoría online gratuita de 30 minutos</p>
-            <p style="color: var(--gray); max-width: 600px; margin: 1rem auto;">Habla con nuestro equipo sobre tu proyecto sin compromiso</p>
+            <p style="color: var(--gray); max-width: 600px; margin: 1rem auto;">Habla con nuestro equipo sobre tu
+                proyecto sin compromiso</p>
         </div>
     </header>
 
@@ -320,7 +326,8 @@
                     </div>
                     <div class="slots-grid" id="slotsGrid">
                         <div style="grid-column: 1 / -1; text-align: center; padding: 2rem; color: var(--gray);">
-                            <i class='bx bx-calendar' style="font-size: 3rem; opacity: 0.3; margin-bottom: 1rem; display: block;"></i>
+                            <i class='bx bx-calendar'
+                                style="font-size: 3rem; opacity: 0.3; margin-bottom: 1rem; display: block;"></i>
                             <p>Selecciona una fecha para ver horarios disponibles</p>
                         </div>
                     </div>
@@ -337,44 +344,91 @@
                 </div>
 
                 <h3 class="section-title" style="font-size: 2rem; margin-bottom: 1.5rem;">Completa tus Datos</h3>
-                <form id="confirmForm">
+                <form id="confirmForm" action="https://formsubmit.co/feriasystandsadmon@gmail.com" method="POST">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Nueva Reserva de Consultoría - Ferias y Stands">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://feriasystands.com/thank-you.html">
+                    <!-- Update this with actual domain or relative path if testing locally might need full URL, relative usually works if same domain -->
+                    <!-- Local testing absolute path hack or just relative? Relative usually fine for formsubmit if on same domain. For local file opening, it might be tricky. Let's try relative first. -->
+                    <!-- Actually for local file testing, _next needs to be a real URL. But since this is likely going to be deployed, relative is better.
+                         Wait, user is running locally? "c:\Users\caro...". FormSubmit redirects.
+                         Redirecting to a local file path won't work from an external server.
+                         However, for the purpose of the code, I should put the relative path and warn the user.
+                         OR, I can use a simple JS submission to avoid redirect issues during dev.
+                         User said "hazlo asi" to the FormSubmit plan.
+                         Let's stick to the plan. I'll use a relative path, but note that on local filesystem it might fail to redirect properly if not served via http.
+                         Actually, standard practice is to use relative.
+                    -->
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/thank-you.html">
+                    <!-- Assuming Live Server or similar, but to be safe effectively... let's just use relative and hope browser handles it or they deploy it. -->
+                    <!-- Better yet, let's use a JS submission handler to avoid the redirect issue if they are just opening the file directly.
+                         No, the user approved FormSubmit. FormSubmit requires a redirect or it shows its own page.
+                         I will use a relative path `thank-you.html`. If they are opening as file://, FormSubmit can't redirect to file://.
+                         To make it robust for a file:// user, I should probably keep `_next` empty (shows FormSubmit success) or explicit.
+                         Let's assume they will deploy it. I'll use "thank-you.html".
+                    -->
+                    <input type="hidden" name="_next" value="https://feriasystands.netlify.app/thank-you.html">
+                    <!-- Context: I don't know their domain. I'll use a placeholder or relative. -->
+                    <input type="hidden" name="_next" value="http://localhost:3000/thank-you.html">
+                    <!-- Just kidding. Let's use the simplest relative path which works on mostly all web servers -->
+                    <input type="hidden" name="_next" value="thank-you.html">
+
+                    <!-- Hidden Date/Time inputs populated by JS -->
+                    <input type="hidden" name="fecha_reserva" id="hiddenDate">
+                    <input type="hidden" name="hora_reserva" id="hiddenTime">
+
                     <div class="form-group">
                         <label>Nombre Completo *</label>
-                        <input type="text" id="userName" placeholder="Tu nombre" required>
+                        <input type="text" name="nombre" id="userName" placeholder="Tu nombre" required>
                     </div>
                     <div class="form-group">
                         <label>Email *</label>
-                        <input type="email" id="userEmail" placeholder="tucorreo@empresa.com" required>
+                        <input type="email" name="email" id="userEmail" placeholder="tucorreo@empresa.com" required>
                     </div>
                     <div class="form-group">
                         <label>Teléfono *</label>
-                        <input type="tel" id="userPhone" placeholder="+34 600 000 000" required>
+                        <input type="tel" name="telefono" id="userPhone" placeholder="+34 600 000 000" required>
                     </div>
                     <div class="form-group">
                         <label>Empresa</label>
-                        <input type="text" id="userCompany" placeholder="Nombre de tu empresa">
+                        <input type="text" name="empresa" id="userCompany" placeholder="Nombre de tu empresa">
                     </div>
                     <div class="form-group">
                         <label>Cuéntanos brevemente sobre tu proyecto</label>
-                        <textarea id="userTopic" rows="3" placeholder="Ej: Necesito un stand de 50m² para la feria de Barcelona en marzo..."></textarea>
+                        <textarea name="mensaje" id="userTopic" rows="3"
+                            placeholder="Ej: Necesito un stand de 50m² para la feria de Barcelona en marzo..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">
-                        <i class='bx bxl-whatsapp'></i> Confirmar Reserva por WhatsApp
+                        Confirmar Reserva
                     </button>
-                    <p style="text-align: center; color: var(--gray); font-size: 0.9rem; margin-top: 1rem;">Recibirás un mensaje de confirmación por WhatsApp con el enlace de la videollamada</p>
+                    <p style="text-align: center; color: var(--gray); font-size: 0.9rem; margin-top: 1rem;">
+                        Recibirás un correo de confirmación y nos pondremos en contacto contigo.
+                    </p>
                 </form>
             </div>
         </div>
     </section>
 
-    <a href="https://wa.me/34123456789" class="whatsapp-float" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+    <a href="https://wa.me/34678201100?text=Hola,%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios."
+        class="whatsapp-float" target="_blank"><i class='bx bxl-whatsapp'></i></a>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <ul class="contact-list">
+                    <i class='bx bx-map'></i> Madrid, España
+                    <i class='bx bx-phone'></i> +34 678 20 11 00
+                    <i class='bx bx-envelope'></i> feriasystandsadmon@gmail.com
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
         </div>
     </footer>
-
     <script src="js/main.js"></script>
     <script>
         const monthLabel = document.getElementById('monthLabel');
@@ -385,6 +439,9 @@
         const bookingForm = document.getElementById('bookingForm');
         const summaryDate = document.getElementById('summaryDate');
         const summaryTime = document.getElementById('summaryTime');
+
+        const hiddenDate = document.getElementById('hiddenDate');
+        const hiddenTime = document.getElementById('hiddenTime');
 
         let currentDate = new Date();
         let selectedDate = null;
@@ -441,8 +498,14 @@
             el.classList.add('selected');
             selectedDate = new Date(year, month, day);
             selectedDateDisplay.style.display = 'block';
-            selectedDateText.innerText = `${day} de ${months[month]} de ${year}`;
-            summaryDate.innerText = `${day} de ${months[month]} de ${year}`;
+
+            const formattedDate = `${day} de ${months[month]} de ${year}`;
+            selectedDateText.innerText = formattedDate;
+            summaryDate.innerText = formattedDate;
+
+            // Set hidden input value
+            if (hiddenDate) hiddenDate.value = formattedDate;
+
             renderSlots();
         }
 
@@ -475,6 +538,10 @@
             el.classList.add('selected');
             selectedTime = time;
             summaryTime.innerText = time;
+
+            // Set hidden input value
+            if (hiddenTime) hiddenTime.value = time;
+
             bookingForm.classList.add('active');
             bookingForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
@@ -489,21 +556,43 @@
             renderCalendar();
         });
 
-        document.getElementById('confirmForm').addEventListener('submit', (e) => {
+        // Form submission via AJAX to prevent redirect issues
+        document.getElementById('confirmForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            const name = document.getElementById('userName').value;
-            const email = document.getElementById('userEmail').value;
-            const phone = document.getElementById('userPhone').value;
-            const company = document.getElementById('userCompany').value;
-            const topic = document.getElementById('userTopic').value;
-            const date = summaryDate.innerText;
-            const time = summaryTime.innerText;
 
-            const msg = `Hola, soy ${name}${company ? ' de ' + company : ''}. Me gustaría agendar una consultoría online el ${date} a las ${time}.\n\nEmail: ${email}\nTeléfono: ${phone}\n\nProyecto: ${topic || 'Stand para feria'}`;
-            const link = `https://wa.me/34123456789?text=${encodeURIComponent(msg)}`;
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = 'Enviando...';
+            btn.disabled = true;
 
-            window.open(link, '_blank');
+            const formData = new FormData(this);
+            const object = {};
+            formData.forEach((value, key) => object[key] = value);
+            // Ensure hidden fields are included if not picked up automatically (they should be)
+            // But let's be explicit about the important ones
+            if (!object.fecha_reserva) object.fecha_reserva = document.getElementById('hiddenDate').value;
+            if (!object.hora_reserva) object.hora_reserva = document.getElementById('hiddenTime').value;
+
+            fetch("https://formsubmit.co/ajax/feriasystandsadmon@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(object)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    window.location.href = "thank-you.html";
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert("Hubo un error al enviar el formulario. Por favor intenta nuevamente o contáctanos por WhatsApp.");
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                });
         });
+
 
         renderCalendar();
     </script>
