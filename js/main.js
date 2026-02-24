@@ -64,9 +64,11 @@ window.addEventListener('scroll', () => {
 });
 
 // Scroll Animations (Intersection Observer)
+const isMobile = window.innerWidth <= 768;
+
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: isMobile ? 0.05 : 0.1,
+    rootMargin: isMobile ? '0px 0px -20px 0px' : '0px 0px -50px 0px'
 };
 
 const fadeInObserver = new IntersectionObserver((entries) => {
@@ -91,7 +93,11 @@ document.querySelectorAll('section').forEach(section => {
 document.querySelectorAll('.feature-card, .service-card, .portfolio-item').forEach((card, index) => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
-    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+
+    // Reduce stagger delay on mobile since cards stack vertically
+    const delay = isMobile ? (index % 2) * 0.1 : index * 0.1;
+    card.style.transition = `opacity 0.6s ease ${delay}s, transform 0.6s ease ${delay}s`;
+
     fadeInObserver.observe(card);
 });
 
