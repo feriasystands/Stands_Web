@@ -41,7 +41,7 @@ let lastScrollTop = 0;
 
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
+
     // Change navbar background
     if (scrollTop > 50) {
         navbar.classList.add('scrolled');
@@ -59,7 +59,7 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.style.transform = 'translateY(0)';
     }
-    
+
     lastScrollTop = scrollTop;
 });
 
@@ -112,7 +112,7 @@ if (track) {
             slide.classList.remove('active');
             slide.style.opacity = '0.5';
             slide.style.transform = 'scale(0.9)';
-            
+
             if (i === index) {
                 slide.classList.add('active');
                 slide.style.opacity = '1';
@@ -175,7 +175,7 @@ const animateCounter = (element, target, duration = 2000) => {
     let start = 0;
     const increment = target / (duration / 16);
     const suffix = element.textContent.replace(/[0-9]/g, '').trim();
-    
+
     const timer = setInterval(() => {
         start += increment;
         if (start >= target) {
@@ -254,18 +254,18 @@ document.querySelectorAll('button[type="submit"]').forEach(button => {
 
 // Portfolio Item Hover Effect Enhancement
 document.querySelectorAll('.portfolio-item').forEach(item => {
-    item.addEventListener('mouseenter', function() {
+    item.addEventListener('mouseenter', function () {
         this.style.transform = 'scale(1.03)';
     });
-    
-    item.addEventListener('mouseleave', function() {
+
+    item.addEventListener('mouseleave', function () {
         this.style.transform = 'scale(1)';
     });
 });
 
 // Service Card Click to Expand (optional feature)
 document.querySelectorAll('.service-card, .feature-card').forEach(card => {
-    card.addEventListener('click', function() {
+    card.addEventListener('click', function () {
         // Add pulse animation on click
         this.style.animation = 'none';
         setTimeout(() => {
@@ -302,7 +302,7 @@ createScrollProgress();
 const typeWriter = (element, text, speed = 100) => {
     let i = 0;
     element.textContent = '';
-    
+
     const type = () => {
         if (i < text.length) {
             element.textContent += text.charAt(i);
@@ -310,16 +310,16 @@ const typeWriter = (element, text, speed = 100) => {
             setTimeout(type, speed);
         }
     };
-    
+
     type();
 };
 
 // Activate typing effect on hero title if exists
-const heroTitle = document.querySelector('.hero-title');
-if (heroTitle && window.location.pathname === '/index.html' || window.location.pathname === '/') {
-    const originalText = heroTitle.textContent;
+const typeText = document.getElementById('typewriterText');
+if (typeText && (window.location.pathname.endsWith('/index.html') || window.location.pathname.endsWith('/'))) {
+    const originalText = typeText.textContent;
     setTimeout(() => {
-        typeWriter(heroTitle, originalText, 80);
+        typeWriter(typeText, originalText, 80);
     }, 500);
 }
 
