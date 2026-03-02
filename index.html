@@ -22,12 +22,17 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">FERIAS Y STANDS<span class="dot">.</span></a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link active">Inicio</a>
-                <a href="servicios.html" class="nav-link">Servicios</a>
-                <a href="nosotros.html" class="nav-link">Nosotros</a>
-                <a href="portfolio.html" class="nav-link">Portafolio</a>
-                <a href="agenda.html" class="nav-link" style="color: var(--highlight);">Agendar</a>
-                <a href="contacto.html" class="nav-link btn-contact">Contacto</a>
+                <a href="index.html" class="nav-link active" data-i18n="nav-inicio">Inicio</a>
+                <a href="servicios.html" class="nav-link" data-i18n="nav-servicios">Servicios</a>
+                <a href="nosotros.html" class="nav-link" data-i18n="nav-nosotros">Nosotros</a>
+                <a href="portfolio.html" class="nav-link" data-i18n="nav-portfolio">Portafolio</a>
+                <a href="contacto.html" class="nav-link btn-contact" data-i18n="nav-contacto">Contacto</a>
+                <div class="lang-selector" style="display:flex; gap:10px; margin-left:1rem; align-items:center;">
+                    <a href="#" class="lang-btn active" data-lang="es"
+                        style="color:var(--white); text-decoration:none; font-weight:600;">ES</a>
+                    <span style="color:var(--gray)">|</span>
+                    <a href="#" class="lang-btn" data-lang="en" style="color:var(--gray); text-decoration:none;">EN</a>
+                </div>
             </div>
             <div class="hamburger">
                 <i class='bx bx-menu'></i>
@@ -37,12 +42,18 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-        <a href="index.html" class="mobile-link">Inicio</a>
-        <a href="servicios.html" class="mobile-link">Servicios</a>
-        <a href="nosotros.html" class="mobile-link">Nosotros</a>
-        <a href="portfolio.html" class="mobile-link">Portafolio</a>
-        <a href="agenda.html" class="mobile-link">Agendar</a>
-        <a href="contacto.html" class="mobile-link">Contacto</a>
+        <a href="index.html" class="mobile-link" data-i18n="nav-inicio">Inicio</a>
+        <a href="servicios.html" class="mobile-link" data-i18n="nav-servicios">Servicios</a>
+        <a href="nosotros.html" class="mobile-link" data-i18n="nav-nosotros">Nosotros</a>
+        <a href="portfolio.html" class="mobile-link" data-i18n="nav-portfolio">Portafolio</a>
+        <a href="contacto.html" class="mobile-link" data-i18n="nav-contacto">Contacto</a>
+        <div class="lang-selector-mobile" style="display:flex; gap:15px; margin-top:2rem;">
+            <a href="#" class="lang-btn active" data-lang="es"
+                style="color:var(--white); text-decoration:none; font-size:1.5rem; font-weight:600;">ES</a>
+            <span style="color:var(--gray); font-size:1.5rem;">|</span>
+            <a href="#" class="lang-btn" data-lang="en"
+                style="color:var(--gray); text-decoration:none; font-size:1.5rem;">EN</a>
+        </div>
     </div>
 
     <!-- Hero Section -->
@@ -51,12 +62,19 @@
             style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('fotosyvideos/F1.jpeg'); background-size: cover; background-position: center;">
         </div>
         <div class="container hero-content">
-            <h1 class="hero-title"><span id="typewriterText">Stands que Conquistan</span><br><span class="animated-text"
-                    id="animatedText">Toda Europa</span></h1>
-            <p class="hero-subtitle">Diseño, fabricación y montaje en ferias internacionales</p>
+            <h1 class="hero-title"><span id="typewriterText" data-i18n="hero-title-first">Stands que
+                    Conquistan</span><br><span class="animated-text" id="animatedText"
+                    data-i18n="hero-title-second">Toda Europa</span></h1>
+            <p class="hero-subtitle" data-i18n="hero-subtitle">Diseño, fabricación y montaje en ferias internacionales
+            </p>
             <div class="hero-buttons">
-                <a href="portfolio.html" class="btn btn-primary">Ver Proyectos</a>
-                <a href="agenda.html" class="btn btn-secondary">Agendar Consulta Gratis</a>
+                <a href="portfolio.html" class="btn btn-primary" data-i18n="btn-ver-proyectos">Ver Proyectos</a>
+                <a href="contacto.html" class="btn btn-secondary" data-i18n="btn-agendar-gratis">Agendar Consulta
+                    Gratis</a>
+                <a href="https://wa.me/34678201100?text=Hola,%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios."
+                    class="btn btn-whatsapp-mobile">
+                    <i class='bx bxl-whatsapp'></i> <span data-i18n="btn-hablamos">Hablamos</span>
+                </a>
             </div>
         </div>
     </header>
@@ -65,44 +83,51 @@
     <section class="section-padding" style="background: var(--secondary);">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">¿Por qué elegirnos?</h2>
-                <p class="section-subtitle">Experiencia, calidad y resultados garantizados</p>
+                <h2 class="section-title" data-i18n="features-title">¿Por qué elegirnos?</h2>
+                <p class="section-subtitle" data-i18n="features-subtitle">Experiencia, calidad y resultados garantizados
+                </p>
             </div>
             <div class="feature-grid">
                 <div class="feature-card">
                     <i class='bx bx-trophy feature-icon'></i>
-                    <h3>5+ Años de Trayectoria</h3>
-                    <p>Más de un 5 años transformando espacios efímeros en experiencias memorables. Reconocidos con
+                    <h3 data-i18n="feat-1-title">5+ Años de Trayectoria</h3>
+                    <p data-i18n="feat-1-desc">Más de un 5 años transformando espacios efímeros en experiencias
+                        memorables. Reconocidos con
                         múltiples recomendaciones de diseño internacional.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-rocket feature-icon'></i>
-                    <h3>Servicio Integral 360º</h3>
-                    <p>Desde el concepto inicial hasta el desmontaje final. Diseño 3D, fabricación, montaje,
+                    <h3 data-i18n="feat-2-title">Servicio Integral 360º</h3>
+                    <p data-i18n="feat-2-desc">Desde el concepto inicial hasta el desmontaje final. Diseño 3D,
+                        fabricación, montaje,
                         electricidad, audiovisuales y más. Todo en un solo lugar.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-group feature-icon'></i>
-                    <h3>Equipo Multidisciplinario</h3>
-                    <p>Arquitectos, diseñadores, carpinteros artesanos y técnicos certificados. Un equipo completo para
+                    <h3 data-i18n="feat-3-title">Equipo Multidisciplinario</h3>
+                    <p data-i18n="feat-3-desc">Arquitectos, diseñadores, carpinteros artesanos y técnicos certificados.
+                        Un equipo completo para
                         garantizar la perfección en cada detalle.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-time-five feature-icon'></i>
-                    <h3>Entregas Puntuales</h3>
-                    <p>Cumplimos con los plazos establecidos. Tu stand estará listo cuando lo necesites, sin sorpresas
+                    <h3 data-i18n="feat-4-title">Entregas Puntuales</h3>
+                    <p data-i18n="feat-4-desc">Cumplimos con los plazos establecidos. Tu stand estará listo cuando lo
+                        necesites, sin sorpresas
                         ni retrasos de última hora.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-palette feature-icon'></i>
-                    <h3>Diseño Personalizado</h3>
-                    <p>Cada proyecto es único. Creamos stands que reflejan fielmente la identidad de tu marca y capturan
+                    <h3 data-i18n="feat-5-title">Diseño Personalizado</h3>
+                    <p data-i18n="feat-5-desc">Cada proyecto es único. Creamos stands que reflejan fielmente la
+                        identidad de tu marca y capturan
                         la atención de tu público objetivo.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-medal feature-icon'></i>
-                    <h3>Materiales Premium</h3>
-                    <p>Utilizamos solo materiales de primera calidad. Acabados impecables que garantizan durabilidad y
+                    <h3 data-i18n="feat-6-title">Materiales Premium</h3>
+                    <p data-i18n="feat-6-desc">Utilizamos solo materiales de primera calidad. Acabados impecables que
+                        garantizan durabilidad y
                         una imagen profesional de alto nivel.</p>
                 </div>
             </div>
@@ -113,8 +138,8 @@
     <section class="section-padding">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Nuestro Proceso de Trabajo</h2>
-                <p class="section-subtitle">De la idea a la realidad en 4 pasos</p>
+                <h2 class="section-title" data-i18n="process-title">Nuestro Proceso de Trabajo</h2>
+                <p class="section-subtitle" data-i18n="process-subtitle">De la idea a la realidad en 4 pasos</p>
             </div>
             <div class="process-steps">
                 <div class="step">
@@ -123,19 +148,20 @@
                         <div class="step-number">1</div>
                     </div>
                     <div class="step-content">
-                        <h3>Consultoría Inicial</h3>
-                        <p>Reunión personalizada para entender tus objetivos, presupuesto y requerimientos. Analizamos
+                        <h3 data-i18n="proc-1-title">Consultoría Inicial</h3>
+                        <p data-i18n="proc-1-desc">Reunión personalizada para entender tus objetivos, presupuesto y
+                            requerimientos. Analizamos
                             el espacio y el evento en detalle.</p>
                     </div>
                 </div>
                 <div class="step">
-                    <div class="step-image"
-                        style="background-image: url('https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="step-image" style="background-image: url('fotosyvideos/1e8hygha.jpg');">
                         <div class="step-number">2</div>
                     </div>
                     <div class="step-content">
-                        <h3>Diseño y asesoramiento</h3>
-                        <p>Creamos renders fotorrealistas del stand. Visualiza cada detalle antes de la construcción y
+                        <h3 data-i18n="proc-2-title">Diseño y asesoramiento</h3>
+                        <p data-i18n="proc-2-desc">Creamos renders fotorrealistas del stand. Visualiza cada detalle
+                            antes de la construcción y
                             aprueba el diseño final.</p>
                     </div>
                 </div>
@@ -144,8 +170,9 @@
                         <div class="step-number">3</div>
                     </div>
                     <div class="step-content">
-                        <h3>Fabricación</h3>
-                        <p>Nuestro taller fabrica todos los elementos con precisión. Control de calidad en cada fase del
+                        <h3 data-i18n="proc-3-title">Fabricación</h3>
+                        <p data-i18n="proc-3-desc">Nuestro taller fabrica todos los elementos con precisión. Control de
+                            calidad en cada fase del
                             proceso productivo.</p>
                     </div>
                 </div>
@@ -154,8 +181,9 @@
                         <div class="step-number">4</div>
                     </div>
                     <div class="step-content">
-                        <h3>Montaje</h3>
-                        <p>Instalación completa en el recinto ferial. Tu stand listo para impactar desde el primer día
+                        <h3 data-i18n="proc-4-title">Montaje</h3>
+                        <p data-i18n="proc-4-desc">Instalación completa en el recinto ferial. Tu stand listo para
+                            impactar desde el primer día
                             del evento.</p>
                     </div>
                 </div>
@@ -168,25 +196,25 @@
         style="background: linear-gradient(135deg, var(--secondary), rgba(220, 38, 38, 0.05));">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Números que Hablan</h2>
-                <p class="section-subtitle">Nuestra experiencia en cifras</p>
+                <h2 class="section-title" data-i18n="stats-title">Números que Hablan</h2>
+                <p class="section-subtitle" data-i18n="stats-subtitle">Nuestra experiencia en cifras</p>
             </div>
             <div class="stats">
                 <div class="stat-item">
                     <span class="stat-number">100+</span>
-                    <span class="stat-label">Proyectos Completados</span>
+                    <span class="stat-label" data-i18n="stat-1">Proyectos Completados</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">120+</span>
-                    <span class="stat-label">Clientes Satisfechos</span>
+                    <span class="stat-label" data-i18n="stat-2">Clientes Satisfechos</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">50+</span>
-                    <span class="stat-label">Recomendaciones</span>
+                    <span class="stat-label" data-i18n="stat-3">Recomendaciones</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">98%</span>
-                    <span class="stat-label">Tasa de Satisfacción</span>
+                    <span class="stat-label" data-i18n="stat-4">Tasa de Satisfacción</span>
                 </div>
             </div>
         </div>
@@ -196,8 +224,8 @@
     <section class="section-padding">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Proyectos Destacados</h2>
-                <p class="section-subtitle">Algunos de nuestros trabajos más recientes</p>
+                <h2 class="section-title" data-i18n="port-title">Proyectos Destacados</h2>
+                <p class="section-subtitle" data-i18n="port-subtitle">Algunos de nuestros trabajos más recientes</p>
             </div>
             <div class="portfolio-grid" style="margin-top: 3rem;">
                 <div class="portfolio-item" style="background-image: url('fotosyvideos/Delphi.jpeg');">
@@ -206,7 +234,7 @@
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Delphi Technologies</h3>
-                        <p>Stand de 120m² para la Feria de Automoción de Barcelona</p>
+                        <p data-i18n="port-1-desc">Stand de 120m² para la Feria de Automoción de Barcelona</p>
                     </div>
                 </div>
                 <div class="portfolio-item" style="background-image: url('fotosyvideos/FelixSolis.jpeg');">
@@ -215,7 +243,7 @@
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Felix Solis</h3>
-                        <p>Diseño premium para feria internacional de vinos</p>
+                        <p data-i18n="port-2-desc">Diseño premium para feria internacional de vinos</p>
                     </div>
                 </div>
                 <div class="portfolio-item" style="background-image: url('fotosyvideos/PLUSPOWER.jpeg');">
@@ -224,12 +252,12 @@
                     </div>
                     <div class="portfolio-overlay">
                         <h3>Plus Power</h3>
-                        <p>Stand tecnológico con integración audiovisual avanzada</p>
+                        <p data-i18n="port-3-desc">Stand tecnológico con integración audiovisual avanzada</p>
                     </div>
                 </div>
             </div>
             <div class="center" style="margin-top: 3rem;">
-                <a href="portfolio.html" class="btn btn-primary">Ver Todo el Portafolio</a>
+                <a href="portfolio.html" class="btn btn-primary" data-i18n="btn-ver-todo">Ver Todo el Portafolio</a>
             </div>
         </div>
     </section>
@@ -238,30 +266,34 @@
     <section class="testimonials section-padding">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
-                <p class="section-subtitle">Testimonios reales de empresas que confiaron en nosotros</p>
+                <h2 class="section-title" data-i18n="test-title">Lo Que Dicen Nuestros Clientes</h2>
+                <p class="section-subtitle" data-i18n="test-subtitle">Testimonios reales de empresas que confiaron en
+                    nosotros</p>
             </div>
             <div class="testimonial-container">
                 <div class="testimonial-track">
                     <div class="testimonial-slide active">
-                        <p class="testimonial-text">"El equipo de Ferias y Stands superó todas nuestras expectativas. El
+                        <p class="testimonial-text" data-i18n="test-1-desc">"El equipo de Ferias y Stands superó todas
+                            nuestras expectativas. El
                             diseño fue innovador, la ejecución impecable y el resultado final generó un impacto
                             increíble en la feria. Recibimos más visitas que nunca."</p>
-                        <p class="testimonial-author">Directora de Marketing</p>
+                        <p class="testimonial-author" data-i18n="test-1-auth">Directora de Marketing</p>
                         <p class="testimonial-role"> Delphi Technologies</p>
                     </div>
                     <div class="testimonial-slide">
-                        <p class="testimonial-text">"Profesionalidad de principio a fin. Cumplieron con los plazos, el
+                        <p class="testimonial-text" data-i18n="test-2-desc">"Profesionalidad de principio a fin.
+                            Cumplieron con los plazos, el
                             presupuesto y la calidad fue excepcional. Sin duda repetiremos para nuestros próximos
                             eventos."</p>
                         <p class="testimonial-author">CEO</p>
                         <p class="testimonial-role"> Plus Power</p>
                     </div>
                     <div class="testimonial-slide">
-                        <p class="testimonial-text">"El servicio integral que ofrecen es lo que realmente marca la
+                        <p class="testimonial-text" data-i18n="test-3-desc">"El servicio integral que ofrecen es lo que
+                            realmente marca la
                             diferencia. Desde el diseño 3D hasta la instalación final, todo estuvo perfectamente
                             coordinado. Muy recomendables."</p>
-                        <p class="testimonial-author">Gerente de Eventos</p>
+                        <p class="testimonial-author" data-i18n="test-3-auth">Gerente de Eventos</p>
                         <p class="testimonial-role"> Felix Solis</p>
                     </div>
                 </div>
@@ -277,13 +309,15 @@
     <section class="section-padding"
         style="background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(248, 113, 113, 0.1));">
         <div class="container center">
-            <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 1.5rem;">Let's Create Together</h2>
-            <p style="font-size: 1.3rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
-                Ready to make your brand stand out at the next exhibition? Contact us today for a free consultation.
+            <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 1.5rem;" data-i18n="cta-title">¿Creamos
+                Algo Juntos?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;"
+                data-i18n="cta-desc">
+                ¿Listo para que tu marca destaque en la próxima feria? Contáctanos hoy para una consulta gratuita.
             </p>
             <div class="hero-buttons">
-                <a href="agenda.html" class="btn btn-primary">Schedule a Meeting</a>
-                <a href="contacto.html" class="btn btn-secondary">Contact Us</a>
+                <a href="contacto.html" class="btn btn-primary" data-i18n="btn-schedule">Agendar una Reunión</a>
+                <a href="contacto.html" class="btn btn-secondary" data-i18n="btn-contact-us">Contáctanos</a>
             </div>
         </div>
     </section>
@@ -298,7 +332,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-col">
-                <h3>Contacto</h3>
+                <h3 data-i18n="footer-contact">Contacto</h3>
                 <ul class="contact-list">
                     <i class='bx bx-map'></i> Madrid, España
                     <i class='bx bx-phone'></i> +34 678 20 11 00
@@ -307,10 +341,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
+            <p data-i18n="footer-rights">&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
     <script>
         // Animate letters in "Toda Europa"

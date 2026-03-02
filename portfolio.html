@@ -20,24 +20,35 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">FERIAS Y STANDS<span class="dot">.</span></a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Inicio</a>
-                <a href="servicios.html" class="nav-link">Servicios</a>
-                <a href="nosotros.html" class="nav-link">Nosotros</a>
-                <a href="portfolio.html" class="nav-link active">Portafolio</a>
-                <a href="agenda.html" class="nav-link" style="color: var(--highlight);">Agendar</a>
-                <a href="contacto.html" class="nav-link btn-contact">Contacto</a>
+                <a href="index.html" class="nav-link" data-i18n="nav-inicio">Inicio</a>
+                <a href="servicios.html" class="nav-link" data-i18n="nav-servicios">Servicios</a>
+                <a href="nosotros.html" class="nav-link" data-i18n="nav-nosotros">Nosotros</a>
+                <a href="portfolio.html" class="nav-link active" data-i18n="nav-portfolio">Portafolio</a>
+                <a href="contacto.html" class="nav-link btn-contact" data-i18n="nav-contacto">Contacto</a>
+                <div class="lang-selector" style="display:flex; gap:10px; margin-left:1rem; align-items:center;">
+                    <a href="#" class="lang-btn active" data-lang="es"
+                        style="color:var(--white); text-decoration:none; font-weight:600;">ES</a>
+                    <span style="color:var(--gray)">|</span>
+                    <a href="#" class="lang-btn" data-lang="en" style="color:var(--gray); text-decoration:none;">EN</a>
+                </div>
             </div>
             <div class="hamburger"><i class='bx bx-menu'></i></div>
         </div>
     </nav>
 
     <div class="mobile-menu">
-        <a href="index.html" class="mobile-link">Inicio</a>
-        <a href="servicios.html" class="mobile-link">Servicios</a>
-        <a href="nosotros.html" class="mobile-link">Nosotros</a>
-        <a href="portfolio.html" class="mobile-link">Portafolio</a>
-        <a href="agenda.html" class="mobile-link">Agendar</a>
-        <a href="contacto.html" class="mobile-link">Contacto</a>
+        <a href="index.html" class="mobile-link" data-i18n="nav-inicio">Inicio</a>
+        <a href="servicios.html" class="mobile-link" data-i18n="nav-servicios">Servicios</a>
+        <a href="nosotros.html" class="mobile-link" data-i18n="nav-nosotros">Nosotros</a>
+        <a href="portfolio.html" class="mobile-link active" data-i18n="nav-portfolio">Portafolio</a>
+        <a href="contacto.html" class="mobile-link" data-i18n="nav-contacto">Contacto</a>
+        <div class="lang-selector-mobile" style="display:flex; gap:15px; margin-top:2rem;">
+            <a href="#" class="lang-btn active" data-lang="es"
+                style="color:var(--white); text-decoration:none; font-size:1.5rem; font-weight:600;">ES</a>
+            <span style="color:var(--gray); font-size:1.5rem;">|</span>
+            <a href="#" class="lang-btn" data-lang="en"
+                style="color:var(--gray); text-decoration:none; font-size:1.5rem;">EN</a>
+        </div>
     </div>
 
     <header class="hero" style="height: 70vh; position: relative;">
@@ -46,8 +57,10 @@
         </div>
 
         <div class="container hero-content">
-            <h1 class="hero-title hero-title-decorated" style="font-size: 4.5rem;">Nuestro Portafolio</h1>
-            <p class="hero-subtitle">Stands que transforman visitas en conversaciones, conversaciones en negocios</p>
+            <h1 class="hero-title hero-title-decorated" style="font-size: 4.5rem;" data-i18n="port-hero-title">Nuestro
+                Portafolio</h1>
+            <p class="hero-subtitle" data-i18n="port-hero-subtitle">Stands que transforman visitas en conversaciones,
+                conversaciones en negocios</p>
         </div>
     </header>
 
@@ -57,19 +70,19 @@
             <div class="stats">
                 <div class="stat-item">
                     <span class="stat-number">100+</span>
-                    <span class="stat-label">Proyectos Completados</span>
+                    <span class="stat-label" data-i18n="port-stat-1">Proyectos Completados</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">15</span>
-                    <span class="stat-label">Sectores Industriales</span>
+                    <span class="stat-label" data-i18n="port-stat-2">Sectores Industriales</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">30+</span>
-                    <span class="stat-label">Recintos Feriales</span>
+                    <span class="stat-label" data-i18n="port-stat-3">Recintos Feriales</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">100%</span>
-                    <span class="stat-label">Satisfacción Garantizada</span>
+                    <span class="stat-label" data-i18n="port-stat-4">Satisfacción Garantizada</span>
                 </div>
             </div>
         </div>
@@ -79,8 +92,9 @@
     <section class="portfolio section-padding">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Proyectos Destacados</h2>
-                <p class="section-subtitle">Una selección de nuestros trabajos más representativos</p>
+                <h2 class="section-title" data-i18n="port-feat-title">Proyectos Destacados</h2>
+                <p class="section-subtitle" data-i18n="port-feat-subtitle">Una selección de nuestros trabajos más
+                    representativos</p>
             </div>
             <div class="portfolio-grid">
                 <!-- Delphi -->
@@ -90,9 +104,10 @@
                         <img src="logos/Delphi logo.png" alt="Delphi Logo">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Delphi Technologies</h3>
-                        <p>Stand de 120m² • Feria de Automoción Barcelona</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Stand premium con zona de
+                        <h3 data-i18n="port-p1-title">Delphi Technologies</h3>
+                        <p data-i18n="port-p1-sub">Stand de 120m² • Feria de Automoción Barcelona</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;" data-i18n="port-p1-desc">Stand
+                            premium con zona de
                             recepción, sala de reuniones privada, área de demostración de productos y showroom
                             interactivo. Iluminación LED RGB y pantallas audiovisuales 4K integradas.</p>
                     </div>
@@ -104,9 +119,10 @@
                         <img src="logos/aragon defence hub.jpg" alt="Aragon Logo">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Aragon Defence Hub</h3>
-                        <p>Stand de 85m² • Feria Internacional de Defensa</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Diseño sobrio y profesional con
+                        <h3 data-i18n="port-p2-title">Aragon Defence Hub</h3>
+                        <p data-i18n="port-p2-sub">Stand de 85m² • Feria Internacional de Defensa</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;" data-i18n="port-p2-desc">Diseño
+                            sobrio y profesional con
                             acabados de alta seguridad. Zona de exposición técnica y sala de presentaciones.</p>
                     </div>
                 </div>
@@ -117,9 +133,10 @@
                         <img src="logos/felix-solis-logo.png" alt="Felix Solis Logo">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Felix Solis</h3>
-                        <p>Stand de 95m² • Feria del Vino Madrid</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Espacio elegante con barra de
+                        <h3 data-i18n="port-p3-title">Felix Solis</h3>
+                        <p data-i18n="port-p3-sub">Stand de 95m² • Feria del Vino Madrid</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;" data-i18n="port-p3-desc">Espacio
+                            elegante con barra de
                             cata, vinoteca iluminada, zona lounge y almacén integrado. Madera noble y acabados premium.
                         </p>
                     </div>
@@ -131,9 +148,10 @@
                         <img src="logos/indupanel.png" alt="Indupanel Logo">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Indupanel</h3>
-                        <p>Stand de 75m² • Feria de Construcción</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Stand modular con muestras de
+                        <h3 data-i18n="port-p4-title">Indupanel</h3>
+                        <p data-i18n="port-p4-sub">Stand de 75m² • Feria de Construcción</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;" data-i18n="port-p4-desc">Stand
+                            modular con muestras de
                             productos, zona técnica de asesoramiento y pantallas informativas. Diseño industrial
                             moderno.</p>
                     </div>
@@ -145,9 +163,10 @@
                         <img src="logos/pluspower.png" alt="Plus Power Logo">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>Plus Power</h3>
-                        <p>Stand de 110m² • Feria de Energía Renovable</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Diseño futurista con elementos
+                        <h3 data-i18n="port-p5-title">Plus Power</h3>
+                        <p data-i18n="port-p5-sub">Stand de 110m² • Feria de Energía Renovable</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;" data-i18n="port-p5-desc">Diseño
+                            futurista con elementos
                             tecnológicos. Maquetas interactivas, videowalls y sistema de iluminación dinámico
                             programable.</p>
                     </div>
@@ -156,9 +175,10 @@
                 <!-- Industrias Duero -->
                 <div class="portfolio-item" style="background-image: url('fotosyvideos/industrias DUERO.jpeg');">
                     <div class="portfolio-overlay">
-                        <h3>Industrias Duero</h3>
-                        <p>Stand de 65m² • Feria de Seguridad Vial</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Espacio funcional con área de
+                        <h3 data-i18n="port-p6-title">Industrias Duero</h3>
+                        <p data-i18n="port-p6-sub">Stand de 65m² • Feria de Seguridad Vial</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;" data-i18n="port-p6-desc">Espacio
+                            funcional con área de
                             exhibición de productos, zona de demostraciones y recepción integrada. Colores corporativos
                             destacados.</p>
                     </div>
@@ -170,9 +190,10 @@
                         <img src="logos/DieselAM-logo.png" alt="Diesel AM Logo">
                     </div>
                     <div class="portfolio-overlay">
-                        <h3>DieselAM</h3>
-                        <p>Diseño de Stand Industrial</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Solución robusta y visualmente
+                        <h3 data-i18n="port-p7-title">DieselAM</h3>
+                        <p data-i18n="port-p7-sub">Diseño de Stand Industrial</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;" data-i18n="port-p7-desc">
+                            Solución robusta y visualmente
                             impactante para destacar en el sector industrial.</p>
                     </div>
                 </div>
@@ -180,9 +201,10 @@
                 <!-- Lenard -->
                 <div class="portfolio-item" style="background-image: url('fotosyvideos/Lenard.jpeg');">
                     <div class="portfolio-overlay">
-                        <h3>Lenard</h3>
-                        <p>Diseño de Stand Corporativo</p>
-                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">Espacio innovador diseñado para
+                        <h3 data-i18n="port-p8-title">Lenard</h3>
+                        <p data-i18n="port-p8-sub">Diseño de Stand Corporativo</p>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;" data-i18n="port-p8-desc">Espacio
+                            innovador diseñado para
                             maximizar la visibilidad de marca y la interacción con los visitantes.</p>
                     </div>
                 </div>
@@ -190,49 +212,138 @@
         </div>
     </section>
 
+    <!-- Image Gallery -->
+    <section class="gallery-section section-padding">
+        <div class="container">
+            <div class="center">
+                <h2 class="section-title" data-i18n="port-gal-title">Galería de Proyectos</h2>
+                <p class="section-subtitle" data-i18n="port-gal-subtitle">Explora más de nuestro trabajo en detalle</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-src="fotosyvideos/ARAGON DEFENCE HUB.jpeg">
+                    <img data-src="fotosyvideos/ARAGON DEFENCE HUB.jpeg" alt="Aragon Defence Hub" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/Delphi.jpeg">
+                    <img data-src="fotosyvideos/Delphi.jpeg" alt="Delphi" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/Delphi2.jpeg">
+                    <img data-src="fotosyvideos/Delphi2.jpeg" alt="Delphi Detail" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/F1.jpeg">
+                    <img data-src="fotosyvideos/F1.jpeg" alt="Exhibition View" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/FelixSolis.jpeg">
+                    <img data-src="fotosyvideos/FelixSolis.jpeg" alt="Felix Solis" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/Indupanel.jpeg">
+                    <img data-src="fotosyvideos/Indupanel.jpeg" alt="Indupanel" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/Indupanel2.jpeg">
+                    <img data-src="fotosyvideos/Indupanel2.jpeg" alt="Indupanel Detail" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/Lenard.jpeg">
+                    <img data-src="fotosyvideos/Lenard.jpeg" alt="Lenard" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/PLUSPOWER.jpeg">
+                    <img data-src="fotosyvideos/PLUSPOWER.jpeg" alt="Plus Power" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/industrias DUERO.jpeg">
+                    <img data-src="fotosyvideos/industrias DUERO.jpeg" alt="Industrias Duero" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/industrias DUERO2.jpeg">
+                    <img data-src="fotosyvideos/industrias DUERO2.jpeg" alt="Industrias Duero Detail" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/P.11.jpeg">
+                    <img data-src="fotosyvideos/P.11.jpeg" alt="Project 11" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/P1.jpeg">
+                    <img data-src="fotosyvideos/P1.jpeg" alt="Project 1" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/P2.jpeg">
+                    <img data-src="fotosyvideos/P2.jpeg" alt="Project 2" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/P4.jpeg">
+                    <img data-src="fotosyvideos/P4.jpeg" alt="Project 4" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+                <div class="gallery-item" data-src="fotosyvideos/montaje (2).jpeg">
+                    <img data-src="fotosyvideos/montaje (2).jpeg" alt="Assembly Process" class="lazy-load">
+                    <div class="gallery-overlay"><i class='bx bx-zoom-in'></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
     <!-- Services We Provided -->
     <section class="section-padding" style="background: var(--secondary);">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Servicios Implementados</h2>
-                <p class="section-subtitle">Cada proyecto incluye una combinación personalizada de nuestros servicios
+                <h2 class="section-title" data-i18n="port-serv-title">Servicios Implementados</h2>
+                <p class="section-subtitle" data-i18n="port-serv-subtitle">Cada proyecto incluye una combinación
+                    personalizada de nuestros servicios
                 </p>
             </div>
             <div class="feature-grid">
                 <div class="feature-card">
                     <i class='bx bx-cube feature-icon'></i>
-                    <h3>Diseño 3D Personalizado</h3>
-                    <p>Renders fotorrealistas y planos técnicos detallados para cada proyecto. Visualización completa
+                    <h3 data-i18n="port-s1-title">Diseño 3D Personalizado</h3>
+                    <p data-i18n="port-s1-desc">Renders fotorrealistas y planos técnicos detallados para cada proyecto.
+                        Visualización completa
                         antes de la construcción.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-cog feature-icon'></i>
-                    <h3>Fabricación Propia</h3>
-                    <p>Carpintería a medida, mobiliario personalizado y estructuras complejas fabricadas en nuestro
+                    <h3 data-i18n="port-s2-title">Fabricación Propia</h3>
+                    <p data-i18n="port-s2-desc">Carpintería a medida, mobiliario personalizado y estructuras complejas
+                        fabricadas en nuestro
                         taller con materiales premium.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-bulb feature-icon'></i>
-                    <h3>Iluminación LED</h3>
-                    <p>Sistemas de iluminación profesional: focos direccionales, tiras LED RGB, iluminación ambiental y
+                    <h3 data-i18n="port-s3-title">Iluminación LED</h3>
+                    <p data-i18n="port-s3-desc">Sistemas de iluminación profesional: focos direccionales, tiras LED RGB,
+                        iluminación ambiental y
                         efectos especiales.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-tv feature-icon'></i>
-                    <h3>Integración Audiovisual</h3>
-                    <p>Pantallas LED 4K, videowalls modulares, sistemas de sonido y control centralizado para
+                    <h3 data-i18n="port-s4-title">Integración Audiovisual</h3>
+                    <p data-i18n="port-s4-desc">Pantallas LED 4K, videowalls modulares, sistemas de sonido y control
+                        centralizado para
                         presentaciones impactantes.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-paint feature-icon'></i>
-                    <h3>Acabados Premium</h3>
-                    <p>Pinturas de alta calidad, lacados especiales, vinilos de gran formato y rotulación profesional
+                    <h3 data-i18n="port-s5-title">Acabados Premium</h3>
+                    <p data-i18n="port-s5-desc">Pinturas de alta calidad, lacados especiales, vinilos de gran formato y
+                        rotulación profesional
                         con colores corporativos exactos.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-wrench feature-icon'></i>
-                    <h3>Montaje Completo</h3>
-                    <p>Servicio llave en mano: transporte, montaje, supervisión durante el evento y desmontaje final con
+                    <h3 data-i18n="port-s6-title">Montaje Completo</h3>
+                    <p data-i18n="port-s6-desc">Servicio llave en mano: transporte, montaje, supervisión durante el
+                        evento y desmontaje final con
                         total garantía.</p>
                 </div>
             </div>
@@ -244,13 +355,15 @@
     <section class="section-padding"
         style="background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(248, 113, 113, 0.1));">
         <div class="container center">
-            <h2 class="section-title" style="font-size: 3.5rem;">¿Quieres un Stand Así?</h2>
-            <p style="font-size: 1.2rem; margin: 1.5rem auto; max-width: 600px;">Cuéntanos sobre tu próximo evento y
+            <h2 class="section-title" style="font-size: 3.5rem;" data-i18n="serv-cta-title">¿Quieres un Stand Así?</h2>
+            <p style="font-size: 1.2rem; margin: 1.5rem auto; max-width: 600px;" data-i18n="serv-cta-desc">Cuéntanos
+                sobre tu próximo evento y
                 crearemos un stand que superará tus expectativas.</p>
             <div class="hero-buttons">
-                <a href="contacto.html" class="btn" style="background: white; color: var(--highlight);">Solicitar
+                <a href="contacto.html" class="btn" style="background: white; color: var(--highlight);"
+                    data-i18n="serv-btn-quote">Solicitar
                     Presupuesto</a>
-                <a href="agenda.html" class="btn btn-secondary">Agendar Consulta</a>
+                <a href="contacto.html" class="btn btn-secondary" data-i18n="serv-btn-schedule">Agendar Consulta</a>
             </div>
         </div>
     </section>
@@ -261,7 +374,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-col">
-                <h3>Contacto</h3>
+                <h3 data-i18n="footer-contact">Contacto</h3>
                 <ul class="contact-list">
                     <i class='bx bx-map'></i> Madrid, España
                     <i class='bx bx-phone'></i> +34 678 20 11 00
@@ -270,9 +383,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
+            <p data-i18n="footer-rights">&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
 </body>
 

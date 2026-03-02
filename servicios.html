@@ -21,24 +21,35 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">FERIAS Y STANDS<span class="dot">.</span></a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Inicio</a>
-                <a href="servicios.html" class="nav-link active">Servicios</a>
-                <a href="nosotros.html" class="nav-link">Nosotros</a>
-                <a href="portfolio.html" class="nav-link">Portafolio</a>
-                <a href="agenda.html" class="nav-link" style="color: var(--highlight);">Agendar</a>
-                <a href="contacto.html" class="nav-link btn-contact">Contacto</a>
+                <a href="index.html" class="nav-link" data-i18n="nav-inicio">Inicio</a>
+                <a href="servicios.html" class="nav-link active" data-i18n="nav-servicios">Servicios</a>
+                <a href="nosotros.html" class="nav-link" data-i18n="nav-nosotros">Nosotros</a>
+                <a href="portfolio.html" class="nav-link" data-i18n="nav-portfolio">Portafolio</a>
+                <a href="contacto.html" class="nav-link btn-contact" data-i18n="nav-contacto">Contacto</a>
+                <div class="lang-selector" style="display:flex; gap:10px; margin-left:1rem; align-items:center;">
+                    <a href="#" class="lang-btn active" data-lang="es"
+                        style="color:var(--white); text-decoration:none; font-weight:600;">ES</a>
+                    <span style="color:var(--gray)">|</span>
+                    <a href="#" class="lang-btn" data-lang="en" style="color:var(--gray); text-decoration:none;">EN</a>
+                </div>
             </div>
             <div class="hamburger"><i class='bx bx-menu'></i></div>
         </div>
     </nav>
 
     <div class="mobile-menu">
-        <a href="index.html" class="mobile-link">Inicio</a>
-        <a href="servicios.html" class="mobile-link">Servicios</a>
-        <a href="nosotros.html" class="mobile-link">Nosotros</a>
-        <a href="portfolio.html" class="mobile-link">Portafolio</a>
-        <a href="agenda.html" class="mobile-link">Agendar</a>
-        <a href="contacto.html" class="mobile-link">Contacto</a>
+        <a href="index.html" class="mobile-link" data-i18n="nav-inicio">Inicio</a>
+        <a href="servicios.html" class="mobile-link" data-i18n="nav-servicios">Servicios</a>
+        <a href="nosotros.html" class="mobile-link" data-i18n="nav-nosotros">Nosotros</a>
+        <a href="portfolio.html" class="mobile-link" data-i18n="nav-portfolio">Portafolio</a>
+        <a href="contacto.html" class="mobile-link" data-i18n="nav-contacto">Contacto</a>
+        <div class="lang-selector-mobile" style="display:flex; gap:15px; margin-top:2rem;">
+            <a href="#" class="lang-btn active" data-lang="es"
+                style="color:var(--white); text-decoration:none; font-size:1.5rem; font-weight:600;">ES</a>
+            <span style="color:var(--gray); font-size:1.5rem;">|</span>
+            <a href="#" class="lang-btn" data-lang="en"
+                style="color:var(--gray); text-decoration:none; font-size:1.5rem;">EN</a>
+        </div>
     </div>
 
     <header class="hero" style="height: 70vh; position: relative;">
@@ -47,8 +58,10 @@
         </div>
 
         <div class="container hero-content">
-            <h1 class="hero-title hero-title-decorated" style="font-size: 4.5rem;">Servicios Integrales</h1>
-            <p class="hero-subtitle">Todo lo que necesitas para brillar en ferias y eventos</p>
+            <h1 class="hero-title hero-title-decorated" style="font-size: 4.5rem;" data-i18n="serv-hero-title">Servicios
+                Integrales</h1>
+            <p class="hero-subtitle" data-i18n="serv-hero-subtitle">Todo lo que necesitas para brillar en ferias y
+                eventos</p>
         </div>
     </header>
 
@@ -56,101 +69,125 @@
     <section class="services section-padding">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Nuestros Servicios Principales</h2>
-                <p class="section-subtitle">Soluciones completas para cada aspecto de tu stand</p>
+                <h2 class="section-title" data-i18n="serv-main-title">Nuestros Servicios Principales</h2>
+                <p class="section-subtitle" data-i18n="serv-main-subtitle">Soluciones completas para cada aspecto de tu
+                    stand</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-palette'></i></div>
-                    <h3>Diseño 3D e Interiorismo</h3>
-                    <p>Conceptualización completa de tu espacio. Creamos diseños fotorrealistas en 3D para que
+                    <h3 data-i18n="serv-1-title">Diseño 3D e Interiorismo</h3>
+                    <p data-i18n="serv-1-desc">Conceptualización completa de tu espacio. Creamos diseños fotorrealistas
+                        en 3D para que
                         visualices cada detalle antes de la construcción. Diseño personalizado que refleja la identidad
                         de tu marca y maximiza el impacto visual.</p>
                     <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Planos técnicos detallados</li>
+                            <span data-i18n="serv-1-li-1">Planos técnicos detallados</span>
+                        </li>
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Múltiples propuestas</li>
+                            <span data-i18n="serv-1-li-2">Múltiples propuestas</span>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-cog'></i></div>
-                    <h3>Carpintería a Medida</h3>
-                    <p>Fabricación propia en nuestro taller equipado con maquinaria de última generación. Trabajamos
+                    <h3 data-i18n="serv-2-title">Carpintería a Medida</h3>
+                    <p data-i18n="serv-2-desc">Fabricación propia en nuestro taller equipado con maquinaria de última
+                        generación. Trabajamos
                         madera, MDF, melamina y materiales compuestos. Mobiliario personalizado, mostradores,
                         expositores y estructuras complejas.</p>
                     <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Mobiliario personalizado</li>
+                            <span data-i18n="serv-2-li-1">Mobiliario personalizado</span>
+                        </li>
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Mostradores y recepción</li>
+                            <span data-i18n="serv-2-li-2">Mostradores y recepción</span>
+                        </li>
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Expositores especiales</li>
+                            <span data-i18n="serv-2-li-3">Expositores especiales</span>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-paint'></i></div>
-                    <h3>Pintura y Acabados</h3>
-                    <p>Pinturas de alta calidad y técnicas profesionales. Acabados mate, satinado, brillante o
+                    <h3 data-i18n="serv-3-title">Pintura y Acabados</h3>
+                    <p data-i18n="serv-3-desc">Pinturas de alta calidad y técnicas profesionales. Acabados mate,
+                        satinado, brillante o
                         especiales como metalizados y texturizados. Cada superficie tratada con el máximo cuidado para
                         un resultado impecable y duradero.</p>
                     <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Acabados premium</li>
+                            <span data-i18n="serv-3-li-1">Acabados premium</span>
+                        </li>
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Colores corporativos</li>
+                            <span data-i18n="serv-3-li-2">Colores corporativos</span>
+                        </li>
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Protección UV</li>
+                            <span data-i18n="serv-3-li-3">Protección UV</span>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-bulb'></i></div>
-                    <h3>Instalación Eléctrica</h3>
-                    <p>Electricistas certificados con experiencia en recintos feriales. Iluminación LED de bajo consumo,
+                    <h3 data-i18n="serv-4-title">Instalación Eléctrica</h3>
+                    <p data-i18n="serv-4-desc">Electricistas certificados con experiencia en recintos feriales.
+                        Iluminación LED de bajo consumo,
                         focos direccionales, tiras LED RGB, tomas de corriente estratégicas. Incluimos boletines
                         eléctricos y certificaciones requeridas.</p>
                     <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Iluminación LED</li>
+                            <span data-i18n="serv-4-li-1">Iluminación LED</span>
+                        </li>
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Boletines certificados</li>
+                            <span data-i18n="serv-4-li-2">Boletines certificados</span>
+                        </li>
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Instalación segura</li>
+                            <span data-i18n="serv-4-li-3">Instalación segura</span>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-building'></i></div>
-                    <h3>Montaje y Desmontaje</h3>
-                    <p>Servicio llave en mano completo. Nos encargamos del transporte, montaje, supervisión durante el
+                    <h3 data-i18n="serv-5-title">Montaje y Desmontaje</h3>
+                    <p data-i18n="serv-5-desc">Servicio llave en mano completo. Nos encargamos del transporte, montaje,
+                        supervisión durante el
                         evento y desmontaje final. Equipos experimentados que trabajan con eficiencia y respeto a los
                         plazos establecidos.</p>
                     <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Transporte incluido</li>
+                            <span data-i18n="serv-5-li-1">Transporte incluido</span>
+                        </li>
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Montaje profesional</li>
+                            <span data-i18n="serv-5-li-2">Montaje profesional</span>
+                        </li>
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Supervisión continua</li>
+                            <span data-i18n="serv-5-li-3">Supervisión continua</span>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-tv'></i></div>
-                    <h3>Audiovisuales</h3>
-                    <p>Alquiler e integración de tecnología audiovisual de última generación. Pantallas LED 4K,
+                    <h3 data-i18n="serv-6-title">Audiovisuales</h3>
+                    <p data-i18n="serv-6-desc">Alquiler e integración de tecnología audiovisual de última generación.
+                        Pantallas LED 4K,
                         videowalls modulares, sistemas de sonido profesionales, proyectores y control centralizado.
                         Soporte técnico durante todo el evento.</p>
                     <ul style="list-style: none; padding: 0; margin-top: 1rem; color: var(--gray);">
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Pantallas LED 4K</li>
+                            <span data-i18n="serv-6-li-1">Pantallas LED 4K</span>
+                        </li>
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Sistemas de audio</li>
+                            <span data-i18n="serv-6-li-2">Sistemas de audio</span>
+                        </li>
                         <li style="padding: 0.3rem 0;"><i class='bx bx-check' style="color: var(--highlight);"></i>
-                            Soporte técnico</li>
+                            <span data-i18n="serv-6-li-3">Soporte técnico</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -161,26 +198,30 @@
     <section class="section-padding" style="background: var(--secondary);">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Servicios Adicionales</h2>
-                <p class="section-subtitle">Complementa tu stand con estos servicios especializados</p>
+                <h2 class="section-title" data-i18n="serv-add-title">Servicios Adicionales</h2>
+                <p class="section-subtitle" data-i18n="serv-add-subtitle">Complementa tu stand con estos servicios
+                    especializados</p>
             </div>
             <div class="feature-grid">
                 <div class="feature-card">
                     <i class='bx bx-printer feature-icon'></i>
-                    <h3>Rotulación e Impresión</h3>
-                    <p>Vinilos de gran formato, impresión digital, rotulación de vehículos, señalética interna y
+                    <h3 data-i18n="serv-add-1-title">Rotulación e Impresión</h3>
+                    <p data-i18n="serv-add-1-desc">Vinilos de gran formato, impresión digital, rotulación de vehículos,
+                        señalética interna y
                         externa. Materiales de alta calidad con acabados mate o brillante según tus necesidades.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-store feature-icon'></i>
-                    <h3>Mobiliario de Alquiler</h3>
-                    <p>Amplio catálogo de mobiliario en alquiler: sillas, mesas, sofás, taburetes, barras y más.
+                    <h3 data-i18n="serv-add-2-title">Mobiliario de Alquiler</h3>
+                    <p data-i18n="serv-add-2-desc">Amplio catálogo de mobiliario en alquiler: sillas, mesas, sofás,
+                        taburetes, barras y más.
                         Opciones modernas y clásicas para adaptarse a cualquier estilo.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-camera feature-icon'></i>
-                    <h3>Fotografía y Video</h3>
-                    <p>Cobertura fotográfica y audiovisual profesional de tu stand. Time-lapse del montaje, fotografías
+                    <h3 data-i18n="serv-add-3-title">Fotografía y Video</h3>
+                    <p data-i18n="serv-add-3-desc">Cobertura fotográfica y audiovisual profesional de tu stand.
+                        Time-lapse del montaje, fotografías
                         de producto, videos promocionales y contenido para redes sociales.</p>
                 </div>
             </div>
@@ -191,8 +232,9 @@
     <section class="section-padding">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Cómo Trabajamos</h2>
-                <p class="section-subtitle">Un proceso probado para resultados excepcionales</p>
+                <h2 class="section-title" data-i18n="serv-how-title">Cómo Trabajamos</h2>
+                <p class="section-subtitle" data-i18n="serv-how-subtitle">Un proceso probado para resultados
+                    excepcionales</p>
             </div>
             <div class="process-steps">
                 <div class="step">
@@ -200,8 +242,9 @@
                         <div class="step-number">1</div>
                     </div>
                     <div class="step-content">
-                        <h3>Montaje de Piezas</h3>
-                        <p>Iniciamos con la construcción estructural del stand. Ensamblaje preciso de paneles, suelos y
+                        <h3 data-i18n="serv-how-1-title">Montaje de Piezas</h3>
+                        <p data-i18n="serv-how-1-desc">Iniciamos con la construcción estructural del stand. Ensamblaje
+                            preciso de paneles, suelos y
                             elementos arquitectónicos para garantizar solidez y seguridad.</p>
                     </div>
                 </div>
@@ -210,8 +253,9 @@
                         <div class="step-number">2</div>
                     </div>
                     <div class="step-content">
-                        <h3>Instalación Eléctrica</h3>
-                        <p>Implementación profesional de la iluminación y puntos de corriente. Certificamos que toda la
+                        <h3 data-i18n="serv-how-2-title">Instalación Eléctrica</h3>
+                        <p data-i18n="serv-how-2-desc">Implementación profesional de la iluminación y puntos de
+                            corriente. Certificamos que toda la
                             instalación cumpla con las normativas de seguridad del recinto.</p>
                     </div>
                 </div>
@@ -220,8 +264,9 @@
                         <div class="step-number">3</div>
                     </div>
                     <div class="step-content">
-                        <h3>Pintura de Montaje</h3>
-                        <p>Aplicación de acabados y pintura in situ para asegurar superficies impecables. Cubrimos
+                        <h3 data-i18n="serv-how-3-title">Pintura de Montaje</h3>
+                        <p data-i18n="serv-how-3-desc">Aplicación de acabados y pintura in situ para asegurar
+                            superficies impecables. Cubrimos
                             uniones y damos los últimos matices de color corporativo.</p>
                     </div>
                 </div>
@@ -230,8 +275,9 @@
                         <div class="step-number">4</div>
                     </div>
                     <div class="step-content">
-                        <h3>Retoques y Detalles Gráficos</h3>
-                        <p>Colocación de vinilos, logotipos y señalética. Revisión final exhaustiva de cada detalle para
+                        <h3 data-i18n="serv-how-4-title">Retoques y Detalles Gráficos</h3>
+                        <p data-i18n="serv-how-4-desc">Colocación de vinilos, logotipos y señalética. Revisión final
+                            exhaustiva de cada detalle para
                             entregar un stand visualmente perfecto.</p>
                     </div>
                 </div>
@@ -243,13 +289,15 @@
     <section class="section-padding"
         style="background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(248, 113, 113, 0.1));">
         <div class="container center">
-            <h2 class="section-title" style="font-size: 3.5rem;">¿Quieres un Stand Así?</h2>
-            <p style="font-size: 1.2rem; margin: 1.5rem auto; max-width: 600px;">Cuéntanos sobre tu próximo evento y
+            <h2 class="section-title" style="font-size: 3.5rem;" data-i18n="serv-cta-title">¿Quieres un Stand Así?</h2>
+            <p style="font-size: 1.2rem; margin: 1.5rem auto; max-width: 600px;" data-i18n="serv-cta-desc">Cuéntanos
+                sobre tu próximo evento y
                 crearemos un stand que superará tus expectativas.</p>
             <div class="hero-buttons">
-                <a href="contacto.html" class="btn" style="background: white; color: var(--highlight);">Solicitar
+                <a href="contacto.html" class="btn" style="background: white; color: var(--highlight);"
+                    data-i18n="serv-btn-quote">Solicitar
                     Presupuesto</a>
-                <a href="agenda.html" class="btn btn-secondary">Agendar Consulta</a>
+                <a href="contacto.html" class="btn btn-secondary" data-i18n="serv-btn-schedule">Agendar Consulta</a>
             </div>
         </div>
     </section>
@@ -261,7 +309,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-col">
-                <h3>Contacto</h3>
+                <h3 data-i18n="footer-contact">Contacto</h3>
                 <ul class="contact-list">
                     <i class='bx bx-map'></i> Madrid, España
                     <i class='bx bx-phone'></i> +34 678 20 11 00
@@ -270,9 +318,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
+            <p data-i18n="footer-rights">&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
 </body>
 

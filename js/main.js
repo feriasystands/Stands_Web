@@ -253,7 +253,7 @@ document.querySelectorAll('button[type="submit"]').forEach(button => {
     button.addEventListener('click', () => {
         if (button.form && button.form.checkValidity()) {
             button.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Enviando...';
-            button.disabled = true;
+            // button.disabled = true; // Removed because it blocks native form submission
         }
     });
 });
@@ -268,6 +268,67 @@ document.querySelectorAll('.portfolio-item').forEach(item => {
         this.style.transform = 'scale(1)';
     });
 });
+
+// Mobile Scroll Animation for Interactive Cards
+if (isMobile) {
+    const mobileScrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('scroll-active');
+            } else {
+                entry.target.classList.remove('scroll-active');
+            }
+        });
+    }, {
+        rootMargin: '-25% 0px -25% 0px',
+        threshold: 0
+    });
+
+    document.querySelectorAll('.portfolio-item, .feature-card, .service-card, .gallery-item').forEach(item => {
+        mobileScrollObserver.observe(item);
+    });
+}
+
+// Lightbox Logic for Image Gallery
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.querySelector('.lightbox-close');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+if (lightbox && galleryItems.length > 0) {
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const imgSrc = item.getAttribute('data-src');
+            if (imgSrc) {
+                lightboxImg.src = imgSrc;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden'; // prevent scrolling behind
+            }
+        });
+    });
+
+    const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+            lightboxImg.src = '';
+        }, 300); // clear image after animate out
+    };
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+}
 
 // Service Card Click to Expand (optional feature)
 document.querySelectorAll('.service-card, .feature-card').forEach(card => {
@@ -357,3 +418,104 @@ window.addEventListener('scroll', debounce(() => {
 }, 10));
 
 console.log('✅ Ferias y Stands - Website Loaded Successfully');
+
+// Initialize Flatpickr for Date and Custom Time Dropdown Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const dateInput = document.getElementById('waDate');
+    const timeSelect = document.getElementById('waTime');
+
+    // Function to generate time options for the select element
+    const generateTimeOptions = (startHour, endHour) => {
+        let options = '<option value="" style="background: #1a1a1a; color: #fff;">Selecciona una hora</option>';
+        for (let h = startHour; h < endHour; h++) {
+            // :00
+            options += `<option value="${String(h).padStart(2, '0')}:00" style="background: #1a1a1a; color: #fff;">${String(h).padStart(2, '0')}:00</option>`;
+            // :30
+            options += `<option value="${String(h).padStart(2, '0')}:30" style="background: #1a1a1a; color: #fff;">${String(h).padStart(2, '0')}:30</option>`;
+        }
+        // Add the final exact end hour (e.g. 18:00)
+        options += `<option value="${String(endHour).padStart(2, '0')}:00" style="background: #1a1a1a; color: #fff;">${String(endHour).padStart(2, '0')}:00</option>`;
+        return options;
+    };
+
+    if (dateInput && typeof flatpickr !== 'undefined') {
+        const currentLang = localStorage.getItem('selectedLang') || 'es';
+
+        flatpickr(dateInput, {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+            locale: currentLang === 'es' ? 'es' : 'en',
+            disableMobile: "true",
+            disable: [
+                function (date) {
+                    // Disable Sundays (0)
+                    return (date.getDay() === 0);
+                }
+            ],
+            onChange: function (selectedDates, dateStr, instance) {
+                if (selectedDates.length > 0 && timeSelect) {
+                    const day = selectedDates[0].getDay();
+                    timeSelect.disabled = false;
+                    timeSelect.style.color = "var(--white)";
+
+                    if (day === 6) { // Saturday
+                        timeSelect.innerHTML = generateTimeOptions(10, 14);
+                    } else { // Monday-Friday
+                        timeSelect.innerHTML = generateTimeOptions(9, 18);
+                    }
+                }
+            }
+        });
+    }
+
+    // AJAX Form Handling to avoid redirect
+    const contactForm = document.getElementById('contactForm');
+    const formSuccessMessage = document.getElementById('formSuccessMessage');
+    const submitBtn = contactForm ? contactForm.querySelector('button[type="submit"]') : null;
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            if (submitBtn) {
+                // Determine text based on lang (fallback to current text)
+                const currentText = submitBtn.innerText;
+                submitBtn.innerHTML = "<i class='bx bx-loader-alt bx-spin'></i>...";
+                submitBtn.disabled = true;
+
+                // Keep reference to origin lang text
+                submitBtn.dataset.originalText = currentText;
+            }
+
+            const formData = new FormData(contactForm);
+
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    formSuccessMessage.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    alert("Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.");
+                }
+            }).catch(error => {
+                alert("Error de red. Por favor, comprueba tu conexión y vuelve a intentarlo.");
+            }).finally(() => {
+                if (submitBtn) {
+                    // Restore original HTML
+                    submitBtn.innerText = submitBtn.dataset.originalText || "Enviar Mensaje";
+                    submitBtn.disabled = false;
+                }
+                setTimeout(() => {
+                    if (formSuccessMessage && formSuccessMessage.style.display === 'block') {
+                        formSuccessMessage.style.display = 'none';
+                    }
+                }, 8000); // Hide after 8s
+            });
+        });
+    }
+});

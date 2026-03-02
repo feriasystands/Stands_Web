@@ -14,6 +14,9 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Flatpickr for Modern Custom Date Picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
 </head>
 
 <body>
@@ -21,24 +24,35 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">FERIAS Y STANDS<span class="dot">.</span></a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Inicio</a>
-                <a href="servicios.html" class="nav-link">Servicios</a>
-                <a href="nosotros.html" class="nav-link">Nosotros</a>
-                <a href="portfolio.html" class="nav-link">Portafolio</a>
-                <a href="agenda.html" class="nav-link" style="color: var(--highlight);">Agendar</a>
-                <a href="contacto.html" class="nav-link btn-contact active">Contacto</a>
+                <a href="index.html" class="nav-link" data-i18n="nav-inicio">Inicio</a>
+                <a href="servicios.html" class="nav-link" data-i18n="nav-servicios">Servicios</a>
+                <a href="nosotros.html" class="nav-link" data-i18n="nav-nosotros">Nosotros</a>
+                <a href="portfolio.html" class="nav-link" data-i18n="nav-portfolio">Portafolio</a>
+                <a href="contacto.html" class="nav-link btn-contact active" data-i18n="nav-contacto">Contacto</a>
+                <div class="lang-selector" style="display:flex; gap:10px; margin-left:1rem; align-items:center;">
+                    <a href="#" class="lang-btn active" data-lang="es"
+                        style="color:var(--white); text-decoration:none; font-weight:600;">ES</a>
+                    <span style="color:var(--gray)">|</span>
+                    <a href="#" class="lang-btn" data-lang="en" style="color:var(--gray); text-decoration:none;">EN</a>
+                </div>
             </div>
             <div class="hamburger"><i class='bx bx-menu'></i></div>
         </div>
     </nav>
 
     <div class="mobile-menu">
-        <a href="index.html" class="mobile-link">Inicio</a>
-        <a href="servicios.html" class="mobile-link">Servicios</a>
-        <a href="nosotros.html" class="mobile-link">Nosotros</a>
-        <a href="portfolio.html" class="mobile-link">Portafolio</a>
-        <a href="agenda.html" class="mobile-link">Agendar</a>
-        <a href="contacto.html" class="mobile-link">Contacto</a>
+        <a href="index.html" class="mobile-link" data-i18n="nav-inicio">Inicio</a>
+        <a href="servicios.html" class="mobile-link" data-i18n="nav-servicios">Servicios</a>
+        <a href="nosotros.html" class="mobile-link" data-i18n="nav-nosotros">Nosotros</a>
+        <a href="portfolio.html" class="mobile-link" data-i18n="nav-portfolio">Portafolio</a>
+        <a href="contacto.html" class="mobile-link" data-i18n="nav-contacto">Contacto</a>
+        <div class="lang-selector-mobile" style="display:flex; gap:15px; margin-top:2rem;">
+            <a href="#" class="lang-btn active" data-lang="es"
+                style="color:var(--white); text-decoration:none; font-size:1.5rem; font-weight:600;">ES</a>
+            <span style="color:var(--gray); font-size:1.5rem;">|</span>
+            <a href="#" class="lang-btn" data-lang="en"
+                style="color:var(--gray); text-decoration:none; font-size:1.5rem;">EN</a>
+        </div>
     </div>
 
     <header class="hero" style="height: 70vh; position: relative;">
@@ -47,8 +61,9 @@
         </div>
 
         <div class="container hero-content">
-            <h1 class="hero-title hero-title-decorated" style="font-size: 4.5rem;">Hablemos</h1>
-            <p class="hero-subtitle">Tu próximo proyecto comienza con una conversación</p>
+            <h1 class="hero-title hero-title-decorated" style="font-size: 4.5rem;" data-i18n="con-hero-title">Hablemos
+            </h1>
+            <p class="hero-subtitle" data-i18n="con-hero-subtitle">Tu próximo proyecto comienza con una conversación</p>
         </div>
     </header>
 
@@ -56,133 +71,133 @@
     <section class="section-padding" style="background: var(--secondary); padding: 4rem 0;">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Múltiples Formas de Contactarnos</h2>
-                <p class="section-subtitle">Elige la opción que mejor se adapte a ti</p>
+                <h2 class="section-title" data-i18n="con-opt-title">Múltiples Formas de Contactarnos</h2>
+                <p class="section-subtitle" data-i18n="con-opt-subtitle">Elige la opción que mejor se adapte a ti</p>
             </div>
             <div class="services-grid" style="margin-top: 3rem;">
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-phone-call'></i></div>
-                    <h3>Llámanos</h3>
-                    <p style="margin-bottom: 1rem;">Atención personalizada de lunes a viernes de 9:00 a 18:00h</p>
+                    <h3 data-i18n="con-opt-1-title">Llámanos</h3>
+                    <p style="margin-bottom: 1rem;" data-i18n="con-opt-1-desc">Atención personalizada de lunes a viernes
+                        de 9:00 a 18:00h</p>
                     <a href="tel:+34678201100" style="color: var(--highlight); font-weight: 600;">+34 678 20 11 00</a>
                 </div>
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-envelope'></i></div>
-                    <h3>Envíanos un Email</h3>
-                    <p style="margin-bottom: 1rem;">Respuesta en menos de 24 horas laborables</p>
+                    <h3 data-i18n="con-opt-2-title">Envíanos un Email</h3>
+                    <p style="margin-bottom: 1rem;" data-i18n="con-opt-2-desc">Respuesta en menos de 24 horas laborables
+                    </p>
                     <a href="mailto:feriasystandsadmon@gmail.com"
                         style="color: var(--highlight); font-weight: 600;">feriasystandsadmon@gmail.com</a>
                 </div>
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bxl-whatsapp'></i></div>
-                    <h3>WhatsApp</h3>
-                    <p style="margin-bottom: 1rem;">Respuesta rápida y directa por chat</p>
+                    <h3 data-i18n="con-opt-3-title">WhatsApp</h3>
+                    <p style="margin-bottom: 1rem;" data-i18n="con-opt-3-desc">Respuesta rápida y directa por chat</p>
                     <a href="https://wa.me/34678201100?text=Hola,%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20vuestros%20servicios."
-                        target="_blank" style="color: var(--highlight); font-weight: 600;">Abrir Chat</a>
+                        target="_blank" style="color: var(--highlight); font-weight: 600;"
+                        data-i18n="con-opt-3-btn">Abrir Chat</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon-box"><i class='bx bx-time-five'></i></div>
+                    <h3 data-i18n="con-opt-4-title">Horario de Atención</h3>
+                    <p style="margin-bottom: 1rem;" data-i18n="con-opt-4-desc">Lunes a Viernes: 9:00 -
+                        18:00h<br>Sábados: 10:00 - 14:00h</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Contact Section -->
-    <section class="contact section-padding">
-        <div class="container contact-wrapper">
-            <div class="contact-info">
-                <h2>Información de Contacto</h2>
-                <p>Visítanos en nuestras oficinas, llámanos o envíanos un mensaje. Estamos aquí para ayudarte a crear el
-                    stand perfecto para tu próximo evento.</p>
-
-                <div class="contact-methods" style="margin-top: 2rem;">
-                    <div class="method">
-                        <i class='bx bx-phone'></i>
-                        <div>
-                            <strong style="display: block; margin-bottom: 0.3rem;">Teléfono</strong>
-                            <span>+34 678 20 11 00</span>
-                        </div>
-                    </div>
-                    <div class="method">
-                        <i class='bx bx-envelope'></i>
-                        <div>
-                            <strong style="display: block; margin-bottom: 0.3rem;">Email</strong>
-                            <span><a href="mailto:feriasystandsadmon@gmail.com"
-                                    class="__cf_email__">feriasystandsadmon@gmail.com</a></span>
-                        </div>
-                    </div>
-                    <div class="method">
-                        <i class='bx bx-time-five'></i>
-                        <div>
-                            <strong style="display: block; margin-bottom: 0.3rem;">Horario</strong>
-                            <span>Lun - Vie: 9:00 - 18:00h<br>Sáb: 10:00 - 14:00h</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div style="margin: 2.5rem 0;">
-                    <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">Síguenos en Redes Sociales</h3>
-                    <div class="social-links">
-                        <a href="#" title="Instagram"><i class='bx bxl-instagram'></i></a>
-                        <a href="#" title="Facebook"><i class='bx bxl-facebook'></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <form class="contact-form" id="contactForm">
-                <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1.5rem;">Envíanos un
-                    Mensaje</h3>
-                <p style="color: var(--gray); margin-bottom: 2rem;">Completa el formulario y nos pondremos en contacto
-                    contigo en menos de 24 horas.</p>
-
-                <div class="form-group">
-                    <label>Nombre Completo *</label>
-                    <input type="text" placeholder="Tu nombre" required>
+    <!-- Main Contact Form Section -->
+    <section class="section-padding">
+        <div class="container" style="display: flex; justify-content: center;">
+            <form action="https://formspree.io/f/xwvndolo" method="POST" class="contact-form" id="contactForm">
+                <div class="form-header full-width" style="margin-bottom: 1.5rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 0.5rem;"
+                        data-i18n="con-form-title">Envíanos un Mensaje</h3>
+                    <p style="color: var(--gray);" data-i18n="con-form-desc">Completa el formulario y nos pondremos en
+                        contacto contigo en menos de 24 horas.</p>
                 </div>
 
                 <div class="form-group">
-                    <label>Email *</label>
-                    <input type="email" placeholder="tucorreo@empresa.com" required>
+                    <label data-i18n="con-form-name">Nombre Completo *</label>
+                    <input type="text" name="nombre" id="waName" placeholder="Tu nombre" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Teléfono</label>
-                    <input type="tel" placeholder="+34 600 000 000">
+                    <label data-i18n="con-form-email-lbl">Email *</label>
+                    <input type="email" name="email" id="waEmail" placeholder="tucorreo@empresa.com" required>
                 </div>
 
                 <div class="form-group">
-                    <label>Empresa</label>
-                    <input type="text" placeholder="Nombre de tu empresa">
+                    <label data-i18n="con-form-phone-lbl">Teléfono</label>
+                    <input type="tel" name="telefono" id="waPhone" placeholder="+34 600 000 000">
                 </div>
 
                 <div class="form-group">
-                    <label>Tipo de Proyecto *</label>
-                    <select
-                        style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 10px; color: var(--white); font-family: var(--font-body);"
-                        required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="stand">Stand para feria</option>
-                        <option value="evento">Evento corporativo</option>
-                        <option value="showroom">Showroom permanente</option>
-                        <option value="pop-up">Pop-up store</option>
-                        <option value="otro">Otro</option>
+                    <label data-i18n="con-form-company-lbl">Empresa</label>
+                    <input type="text" name="empresa" id="waCompany" placeholder="Nombre de tu empresa">
+                </div>
+
+                <div class="form-group">
+                    <label data-i18n="con-form-type">Tipo de Proyecto *</label>
+                    <select name="tipo_proyecto" id="waType" required>
+                        <option value="" data-i18n="con-form-type-opt0">Selecciona una opción</option>
+                        <option value="stand" data-i18n="con-form-type-opt1">Stand para feria</option>
+                        <option value="evento" data-i18n="con-form-type-opt2">Evento corporativo</option>
+                        <option value="showroom" data-i18n="con-form-type-opt3">Showroom permanente</option>
+                        <option value="pop-up" data-i18n="con-form-type-opt4">Pop-up store</option>
+                        <option value="otro" data-i18n="con-form-type-opt5">Otro</option>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label data-i18n="con-form-date">Fecha (Opcional)</label>
+                    <div style="position: relative;">
+                        <input type="text" name="fecha_reserva" id="waDate" placeholder="Elige un día..."
+                            style="color: var(--white); background: rgba(255,255,255,0.05); width: 100%; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1rem; font-family: var(--font-body); cursor: pointer;">
+                        <i class='bx bx-calendar'
+                            style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: var(--highlight); font-size: 1.5rem; pointer-events: none;"></i>
+                    </div>
+                </div>
 
                 <div class="form-group">
-                    <label>Cuéntanos sobre tu Proyecto *</label>
-                    <textarea rows="5"
+                    <label data-i18n="con-form-time">Hora (Opcional)</label>
+                    <div style="position: relative;">
+                        <select name="hora_reserva" id="waTime" disabled
+                            style="color: var(--white); background: rgba(255,255,255,0.05); width: 100%; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1rem; font-family: var(--font-body); cursor: pointer; appearance: none;">
+                            <option value="" style="background: #1a1a1a; color: #fff;">Selecciona una fecha primero
+                            </option>
+                        </select>
+                        <i class='bx bx-chevron-down'
+                            style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); color: var(--highlight); font-size: 1.5rem; pointer-events: none;"></i>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label data-i18n="con-form-msg">Cuéntanos sobre tu Proyecto *</label>
+                    <textarea name="mensaje" id="waMsg" rows="5"
                         placeholder="Describe tu proyecto: dimensiones aproximadas, feria/evento, fechas, presupuesto estimado, servicios que necesitas..."
                         required></textarea>
                 </div>
 
-                <div class="form-group" style="margin-bottom: 0;">
+                <div class="form-group full-width" style="margin-bottom: 0;">
                     <label style="display: flex; align-items: center; cursor: pointer;">
                         <input type="checkbox" required style="width: auto; margin-right: 0.5rem;">
-                        <span style="color: var(--gray); font-size: 0.9rem;">Acepto la <a href="#"
-                                style="color: var(--highlight);">política de privacidad</a></span>
+                        <span style="color: var(--gray); font-size: 0.9rem;" data-i18n="con-form-terms">Acepto la <a
+                                href="#" style="color: var(--highlight);">política de privacidad</a></span>
                     </label>
                 </div>
 
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem;">Enviar
-                    Mensaje</button>
+                <div id="formSuccessMessage" class="full-width"
+                    style="display: none; padding: 1rem; background: rgba(46, 204, 113, 0.1); border: 1px solid #2ecc71; color: #2ecc71; border-radius: 10px; margin-top: 1rem; text-align: center;">
+                    <i class='bx bx-check-circle'
+                        style="font-size: 1.5rem; vertical-align: middle; margin-right: 0.5rem;"></i>
+                    <span data-i18n="con-form-success" style="vertical-align: middle;">¡Mensaje recibido! Nos pondremos
+                        en contacto contigo pronto.</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-width" style="margin-top: 1.5rem;"
+                    data-i18n="con-form-btn">Enviar Mensaje</button>
             </form>
         </div>
     </section>
@@ -191,26 +206,29 @@
     <section class="section-padding" style="background: var(--secondary);">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Preguntas Frecuentes</h2>
-                <p class="section-subtitle">Respuestas rápidas a las dudas más comunes</p>
+                <h2 class="section-title" data-i18n="con-faq-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle" data-i18n="con-faq-subtitle">Respuestas rápidas a las dudas más comunes</p>
             </div>
             <div class="feature-grid" style="margin-top: 3rem;">
                 <div class="feature-card">
                     <i class='bx bx-time-five feature-icon'></i>
-                    <h3>¿Cuánto tiempo necesitan?</h3>
-                    <p>Dependiendo de la complejidad, entre 2-4 semanas desde la aprobación del diseño hasta el montaje
+                    <h3 data-i18n="con-faq-1-title">¿Cuánto tiempo necesitan?</h3>
+                    <p data-i18n="con-faq-1-desc">Dependiendo de la complejidad, entre 2-4 semanas desde la aprobación
+                        del diseño hasta el montaje
                         final. Para proyectos urgentes, contacta directamente.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-euro feature-icon'></i>
-                    <h3>¿Cómo es el proceso de presupuesto?</h3>
-                    <p>Envíanos los detalles de tu proyecto y en 24-48 horas recibirás un presupuesto detallado sin
+                    <h3 data-i18n="con-faq-2-title">¿Cómo es el proceso de presupuesto?</h3>
+                    <p data-i18n="con-faq-2-desc">Envíanos los detalles de tu proyecto y en 24-48 horas recibirás un
+                        presupuesto detallado sin
                         compromiso. Todo transparente y claro.</p>
                 </div>
                 <div class="feature-card">
                     <i class='bx bx-map feature-icon'></i>
-                    <h3>¿Trabajan fuera de Madrid?</h3>
-                    <p>Sí, trabajamos en toda España y Europa. Incluimos transporte y desplazamiento del equipo de
+                    <h3 data-i18n="con-faq-3-title">¿Trabajan fuera de Madrid?</h3>
+                    <p data-i18n="con-faq-3-desc">Sí, trabajamos en toda España y Europa. Incluimos transporte y
+                        desplazamiento del equipo de
                         montaje en el presupuesto.</p>
                 </div>
             </div>
@@ -230,7 +248,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-col">
-                <h3>Contacto</h3>
+                <h3 data-i18n="footer-contact">Contacto</h3>
                 <ul class="contact-list">
                     <i class='bx bx-map'></i> Madrid, España
                     <i class='bx bx-phone'></i> +34 678 20 11 00
@@ -239,9 +257,12 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
+            <p data-i18n="footer-rights">&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
 </body>
 

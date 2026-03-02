@@ -21,24 +21,35 @@
         <div class="container nav-container">
             <a href="index.html" class="logo">FERIAS Y STANDS<span class="dot">.</span></a>
             <div class="nav-links">
-                <a href="index.html" class="nav-link">Inicio</a>
-                <a href="servicios.html" class="nav-link">Servicios</a>
-                <a href="nosotros.html" class="nav-link active">Nosotros</a>
-                <a href="portfolio.html" class="nav-link">Portafolio</a>
-                <a href="agenda.html" class="nav-link" style="color: var(--highlight);">Agendar</a>
-                <a href="contacto.html" class="nav-link btn-contact">Contacto</a>
+                <a href="index.html" class="nav-link" data-i18n="nav-inicio">Inicio</a>
+                <a href="servicios.html" class="nav-link" data-i18n="nav-servicios">Servicios</a>
+                <a href="nosotros.html" class="nav-link active" data-i18n="nav-nosotros">Nosotros</a>
+                <a href="portfolio.html" class="nav-link" data-i18n="nav-portfolio">Portafolio</a>
+                <a href="contacto.html" class="nav-link btn-contact" data-i18n="nav-contacto">Contacto</a>
+                <div class="lang-selector" style="display:flex; gap:10px; margin-left:1rem; align-items:center;">
+                    <a href="#" class="lang-btn active" data-lang="es"
+                        style="color:var(--white); text-decoration:none; font-weight:600;">ES</a>
+                    <span style="color:var(--gray)">|</span>
+                    <a href="#" class="lang-btn" data-lang="en" style="color:var(--gray); text-decoration:none;">EN</a>
+                </div>
             </div>
             <div class="hamburger"><i class='bx bx-menu'></i></div>
         </div>
     </nav>
 
     <div class="mobile-menu">
-        <a href="index.html" class="mobile-link">Inicio</a>
-        <a href="servicios.html" class="mobile-link">Servicios</a>
-        <a href="nosotros.html" class="mobile-link">Nosotros</a>
-        <a href="portfolio.html" class="mobile-link">Portafolio</a>
-        <a href="agenda.html" class="mobile-link">Agendar</a>
-        <a href="contacto.html" class="mobile-link">Contacto</a>
+        <a href="index.html" class="mobile-link" data-i18n="nav-inicio">Inicio</a>
+        <a href="servicios.html" class="mobile-link" data-i18n="nav-servicios">Servicios</a>
+        <a href="nosotros.html" class="mobile-link active" data-i18n="nav-nosotros">Nosotros</a>
+        <a href="portfolio.html" class="mobile-link" data-i18n="nav-portfolio">Portafolio</a>
+        <a href="contacto.html" class="mobile-link" data-i18n="nav-contacto">Contacto</a>
+        <div class="lang-selector-mobile" style="display:flex; gap:15px; margin-top:2rem;">
+            <a href="#" class="lang-btn active" data-lang="es"
+                style="color:var(--white); text-decoration:none; font-size:1.5rem; font-weight:600;">ES</a>
+            <span style="color:var(--gray); font-size:1.5rem;">|</span>
+            <a href="#" class="lang-btn" data-lang="en"
+                style="color:var(--gray); text-decoration:none; font-size:1.5rem;">EN</a>
+        </div>
     </div>
 
     <header class="hero" style="height: 70vh; position: relative;">
@@ -47,8 +58,9 @@
         </div>
 
         <div class="container hero-content">
-            <h1 class="hero-title hero-title-decorated" style="font-size: 4.5rem;">Nuestra Historia</h1>
-            <p class="hero-subtitle">Pasión por el diseño, compromiso con tu éxito</p>
+            <h1 class="hero-title hero-title-decorated" style="font-size: 4.5rem;" data-i18n="nos-hero-title">Nuestra
+                Historia</h1>
+            <p class="hero-subtitle" data-i18n="nos-hero-subtitle">Pasión por el diseño, compromiso con tu éxito</p>
         </div>
     </header>
 
@@ -79,27 +91,30 @@
     <section class="about section-padding">
         <div class="container about-grid">
             <div class="about-text">
-                <h2 class="section-title">Desde 2020 Transformando Espacios</h2>
-                <p>Lo que comenzó como un pequeño taller de carpintería ha evolucionado hasta convertirse en una de las
+                <h2 class="section-title" data-i18n="nos-about-title">Desde 2020 Transformando Espacios</h2>
+                <p data-i18n="nos-about-p1">Lo que comenzó como un pequeño taller de carpintería ha evolucionado hasta
+                    convertirse en una de las
                     agencias líderes en diseño y montaje de stands para ferias en España. Nuestra historia es la de un
                     equipo apasionado que cree firmemente que cada stand es una oportunidad para contar una historia
                     única.</p>
-                <p>En <strong>Ferias y Stands</strong>, no solo construimos estructuras; creamos experiencias memorables
+                <p data-i18n="nos-about-p2">En <strong>Ferias y Stands</strong>, no solo construimos estructuras;
+                    creamos experiencias memorables
                     que conectan marcas con personas. Cada proyecto es un nuevo desafío que abordamos con la misma
                     ilusión del primer día, combinando artesanía tradicional con las técnicas más innovadoras del diseño
                     moderno.</p>
-                <p>Nuestro compromiso con la excelencia nos ha llevado a trabajar con más de 100 clientes en sectores
+                <p data-i18n="nos-about-p3">Nuestro compromiso con la excelencia nos ha llevado a trabajar con más de
+                    100 clientes en sectores
                     tan diversos como automoción, tecnología, alimentación, defensa y energía. Cada uno de ellos ha
                     confiado en nosotros para representar su marca de la mejor manera posible.</p>
 
                 <div class="stats" style="margin-top: 3rem;">
                     <div class="stat-item">
                         <span class="stat-number">5+</span>
-                        <span class="stat-label">Años de Experiencia</span>
+                        <span class="stat-label" data-i18n="nos-stat-1">Años de Experiencia</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">100+</span>
-                        <span class="stat-label">Proyectos Completados</span>
+                        <span class="stat-label" data-i18n="nos-stat-2">Proyectos Completados</span>
                     </div>
                 </div>
             </div>
@@ -116,36 +131,41 @@
     <section class="section-padding" style="background: var(--secondary); padding: 3rem 0;">
         <div class="container">
             <div class="center">
-                <h2 class="section-title" style="margin-bottom: 0.5rem;">Nuestros Valores</h2>
-                <p class="section-subtitle" style="margin-bottom: 2rem;">Los principios que guían cada proyecto</p>
+                <h2 class="section-title" style="margin-bottom: 0.5rem;" data-i18n="nos-val-title">Nuestros Valores</h2>
+                <p class="section-subtitle" style="margin-bottom: 2rem;" data-i18n="nos-val-subtitle">Los principios que
+                    guían cada proyecto</p>
             </div>
             <div class="feature-grid"
                 style="margin-top: 2rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
                 <div class="feature-card" style="padding: 1.5rem;">
                     <i class='bx bx-star feature-icon' style="margin-bottom: 1rem; font-size: 2.5rem;"></i>
-                    <h3 style="font-size: 1.3rem;">Excelencia</h3>
-                    <p style="font-size: 0.95rem;">Nos comprometemos con la máxima calidad en cada detalle. Desde los
+                    <h3 style="font-size: 1.3rem;" data-i18n="nos-val-1-title">Excelencia</h3>
+                    <p style="font-size: 0.95rem;" data-i18n="nos-val-1-desc">Nos comprometemos con la máxima calidad en
+                        cada detalle. Desde los
                         materiales que utilizamos hasta el servicio que brindamos, buscamos la perfección en todo lo que
                         hacemos.</p>
                 </div>
                 <div class="feature-card" style="padding: 1.5rem;">
                     <i class='bx bx-bulb feature-icon' style="margin-bottom: 1rem; font-size: 2.5rem;"></i>
-                    <h3 style="font-size: 1.3rem;">Innovación</h3>
-                    <p style="font-size: 0.95rem;">Estamos constantemente explorando nuevas técnicas, materiales y
+                    <h3 style="font-size: 1.3rem;" data-i18n="nos-val-2-title">Innovación</h3>
+                    <p style="font-size: 0.95rem;" data-i18n="nos-val-2-desc">Estamos constantemente explorando nuevas
+                        técnicas, materiales y
                         tecnologías. Nos mantenemos a la vanguardia del diseño de espacios efímeros para ofrecer
                         soluciones únicas.</p>
                 </div>
                 <div class="feature-card" style="padding: 1.5rem;">
                     <i class='bx bx-shield-alt-2 feature-icon' style="margin-bottom: 1rem; font-size: 2.5rem;"></i>
-                    <h3 style="font-size: 1.3rem;">Compromiso</h3>
-                    <p style="font-size: 0.95rem;">Cumplimos nuestras promesas. Cuando establecemos un plazo, lo
+                    <h3 style="font-size: 1.3rem;" data-i18n="nos-val-3-title">Compromiso</h3>
+                    <p style="font-size: 0.95rem;" data-i18n="nos-val-3-desc">Cumplimos nuestras promesas. Cuando
+                        establecemos un plazo, lo
                         respetamos. Cuando acordamos un presupuesto, lo mantenemos. Tu confianza es nuestro activo más
                         valioso.</p>
                 </div>
                 <div class="feature-card" style="padding: 1.5rem;">
                     <i class='bx bx-group feature-icon' style="margin-bottom: 1rem; font-size: 2.5rem;"></i>
-                    <h3 style="font-size: 1.3rem;">Trabajo en Equipo</h3>
-                    <p style="font-size: 0.95rem;">Creemos en la colaboración. Trabajamos estrechamente contigo para
+                    <h3 style="font-size: 1.3rem;" data-i18n="nos-val-4-title">Trabajo en Equipo</h3>
+                    <p style="font-size: 0.95rem;" data-i18n="nos-val-4-desc">Creemos en la colaboración. Trabajamos
+                        estrechamente contigo para
                         entender tus necesidades y convertir tu visión en realidad, combinando tu experiencia con
                         nuestra creatividad.</p>
                 </div>
@@ -157,45 +177,52 @@
     <section class="section-padding">
         <div class="container">
             <div class="center">
-                <h2 class="section-title">Nuestro Equipo</h2>
-                <p class="section-subtitle">Profesionales multidisciplinarios unidos por una pasión común</p>
+                <h2 class="section-title" data-i18n="nos-team-title">Nuestro Equipo</h2>
+                <p class="section-subtitle" data-i18n="nos-team-subtitle">Profesionales multidisciplinarios unidos por
+                    una pasión común</p>
             </div>
             <div class="services-grid" style="margin-top: 3rem;">
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-buildings'></i></div>
-                    <h3>Arquitectos</h3>
-                    <p>Expertos en diseño espacial que transforman conceptos abstractos en planos técnicos y renders
+                    <h3 data-i18n="nos-team-1-title">Arquitectos</h3>
+                    <p data-i18n="nos-team-1-desc">Expertos en diseño espacial que transforman conceptos abstractos en
+                        planos técnicos y renders
                         fotorrealistas. Su visión arquitectónica garantiza estructuras funcionales y estéticamente
                         impactantes.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-brush'></i></div>
-                    <h3>Diseñadores de Interiores</h3>
-                    <p>Especialistas en crear ambientes que comunican. Dominan el color, la iluminación y la disposición
+                    <h3 data-i18n="nos-team-2-title">Diseñadores de Interiores</h3>
+                    <p data-i18n="nos-team-2-desc">Especialistas en crear ambientes que comunican. Dominan el color, la
+                        iluminación y la disposición
                         de elementos para maximizar el atractivo visual de cada stand.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-wrench'></i></div>
-                    <h3>Carpinteros Artesanos</h3>
-                    <p>Maestros de la madera con décadas de experiencia. Su habilidad manual y atención al detalle
+                    <h3 data-i18n="nos-team-3-title">Carpinteros Artesanos</h3>
+                    <p data-i18n="nos-team-3-desc">Maestros de la madera con décadas de experiencia. Su habilidad manual
+                        y atención al detalle
                         convierten los diseños digitales en piezas físicas de la máxima calidad.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-user-voice'></i></div>
-                    <h3>Electricistas Certificados</h3>
-                    <p>Técnicos especializados en instalaciones feriales. Conocen las normativas de cada recinto y
+                    <h3 data-i18n="nos-team-4-title">Electricistas Certificados</h3>
+                    <p data-i18n="nos-team-4-desc">Técnicos especializados en instalaciones feriales. Conocen las
+                        normativas de cada recinto y
                         garantizan instalaciones seguras y eficientes con todos los certificados necesarios.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-devices'></i></div>
-                    <h3>Técnicos Audiovisuales</h3>
-                    <p>Expertos en integración de tecnología. Configuran pantallas LED, sistemas de sonido, proyecciones
+                    <h3 data-i18n="nos-team-5-title">Técnicos Audiovisuales</h3>
+                    <p data-i18n="nos-team-5-desc">Expertos en integración de tecnología. Configuran pantallas LED,
+                        sistemas de sonido, proyecciones
                         y cualquier elemento multimedia para potenciar tu mensaje.</p>
                 </div>
                 <div class="service-card">
                     <div class="icon-box"><i class='bx bx-user-voice'></i></div>
-                    <h3>Gestores de Proyecto</h3>
-                    <p>Tu punto de contacto principal. Coordinan todos los aspectos del proyecto, mantienen la
+                    <h3 data-i18n="nos-team-6-title">Gestores de Proyecto</h3>
+                    <p data-i18n="nos-team-6-desc">Tu punto de contacto principal. Coordinan todos los aspectos del
+                        proyecto, mantienen la
                         comunicación fluida y se aseguran de que todo se entregue a tiempo y según lo acordado.</p>
                 </div>
             </div>
@@ -205,9 +232,11 @@
     <!-- Clients -->
     <section class="clients section-padding" style="background: rgba(255, 255, 255, 0.02);">
         <div class="container">
-            <h2 class="section-title center" style="text-align: center; margin-bottom: 1rem;">Han Confiado en Nosotros
+            <h2 class="section-title center" style="text-align: center; margin-bottom: 1rem;"
+                data-i18n="nos-clients-title">Han Confiado en Nosotros
             </h2>
-            <p class="section-subtitle center" style="text-align: center; margin-bottom: 3rem;">Marcas líderes que
+            <p class="section-subtitle center" style="text-align: center; margin-bottom: 3rem;"
+                data-i18n="nos-clients-subtitle">Marcas líderes que
                 eligieron nuestros servicios para sus eventos</p>
             <div class="marquee">
                 <div class="marquee-content">
@@ -238,11 +267,13 @@
     <section class="section-padding"
         style="background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(248, 113, 113, 0.1));">
         <div class="container center">
-            <h2 class="section-title" style="font-size: 3rem;">¿Quieres Formar Parte de Esta Historia?</h2>
-            <p style="font-size: 1.2rem; margin: 1.5rem auto; max-width: 600px;">Únete a las marcas que han confiado en
+            <h2 class="section-title" style="font-size: 3rem;" data-i18n="nos-cta-title">¿Quieres Formar Parte de Esta
+                Historia?</h2>
+            <p style="font-size: 1.2rem; margin: 1.5rem auto; max-width: 600px;" data-i18n="nos-cta-desc">Únete a las
+                marcas que han confiado en
                 nosotros para brillar en sus eventos.</p>
-            <a href="contacto.html" class="btn"
-                style="background: white; color: var(--highlight); margin-top: 1rem;">Hablemos de Tu Proyecto</a>
+            <a href="contacto.html" class="btn" style="background: white; color: var(--highlight); margin-top: 1rem;"
+                data-i18n="nos-btn-talk">Hablemos de Tu Proyecto</a>
         </div>
     </section>
 
@@ -252,7 +283,7 @@
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-col">
-                <h3>Contacto</h3>
+                <h3 data-i18n="footer-contact">Contacto</h3>
                 <ul class="contact-list">
                     <i class='bx bx-map'></i> Madrid, España
                     <i class='bx bx-phone'></i> +34 678 20 11 00
@@ -261,9 +292,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
+            <p data-i18n="footer-rights">&copy; 2026 Ferias y Stands. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
 </body>
 
