@@ -419,7 +419,7 @@ body {
 /* Services Grid */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
 }
@@ -1537,7 +1537,7 @@ body {
     }
 
     .portfolio-item.scroll-active::before {
-        background: linear-gradient(to top, rgba(220, 38, 38, 0.9), rgba(0, 0, 0, 0.5)) !important;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent) !important;
     }
 
     .portfolio-item.scroll-active .portfolio-overlay {
@@ -1881,4 +1881,18 @@ span.flatpickr-weekday {
 .flatpickr-day.notAllowed.prevMonthDay,
 .flatpickr-day.notAllowed.nextMonthDay {
     color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Mobile overrides for red hover effects on images */
+@media (max-width: 768px) {
+
+    .portfolio-item:hover::before,
+    .portfolio-item.scroll-active::before {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent) !important;
+    }
+
+    .gallery-item:hover .gallery-overlay,
+    .gallery-item.scroll-active .gallery-overlay {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent) !important;
+    }
 }
