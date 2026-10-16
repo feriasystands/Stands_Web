@@ -77,7 +77,7 @@ const translations = {
 
         // Footer
         "footer-contact": "Contacto",
-        "footer-rights": "© 2026 Ferias y Stands. Todos los derechos reservados.",
+        "footer-rights": "© 2026 CLS Ferias y Stands. Todos los derechos reservados.",
 
         // Servicios Page
         "serv-hero-title": "Servicios Integrales",
@@ -434,7 +434,7 @@ const translations = {
 
         // Footer
         "footer-contact": "Contact",
-        "footer-rights": "© 2026 Ferias y Stands. All rights reserved.",
+        "footer-rights": "© 2026 CLS Ferias y Stands. Todos los derechos reservados.",
 
         // Servicios Page
         "serv-hero-title": "Comprehensive Services",
@@ -729,9 +729,16 @@ const setLanguage = (lang) => {
                 el.innerHTML = '';
                 for (let i = 0; i < text.length; i++) {
                     const span = document.createElement('span');
-                    span.className = 'letter';
-                    span.textContent = text[i];
-                    span.style.animationDelay = `${i * 0.1}s`;
+                    if (text[i] === ' ') {
+                        // Preserve spaces – inline-block collapses whitespace
+                        span.className = 'letter';
+                        span.innerHTML = '&nbsp;';
+                        span.style.animationDelay = `${i * 0.1}s`;
+                    } else {
+                        span.className = 'letter';
+                        span.textContent = text[i];
+                        span.style.animationDelay = `${i * 0.1}s`;
+                    }
                     el.appendChild(span);
                 }
             }

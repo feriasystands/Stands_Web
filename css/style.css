@@ -83,6 +83,57 @@ body {
     transform: scale(1.05);
 }
 
+/* Logo with image + text layout */
+.logo.logo-with-img {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    letter-spacing: 0;
+}
+
+.nav-logo-img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    /* Subtle drop-shadow to pop on dark/light navbars */
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.35));
+    transition: var(--transition);
+}
+
+.logo.logo-with-img:hover .nav-logo-img {
+    filter: drop-shadow(0 2px 6px rgba(180,0,0,0.5));
+    transform: scale(1.05);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logo-cls {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--highlight);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.logo-light {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.72);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 2px;
+}
+
 .dot {
     color: var(--highlight);
     font-size: 2rem;
